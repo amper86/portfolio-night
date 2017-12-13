@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('../../fonts/ubuntu-b-webfont.woff2') format('woff2'),
+  url('../../fonts/ubuntu-b-webfont.woff') format('woff'),
+  url('../../fonts/ubuntu-b-webfont.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+html,
+body{
+  width: 100%;
+}
+body{
+  background-color: gray;
+}
+p {
+  color: red;
+}
+.from-index {
+  border: 2px dotted brown;
+}
+
+
