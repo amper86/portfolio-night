@@ -1,11 +1,14 @@
 extends ../base
 
 block head
-    title Главная страница
+    title Страница приветствия
 
 block content
-    h1 Главная страница тест
-    p.from-index Всем привет!!! хохохох!
-    img(src=require("../../images/icons/webpack.svg") width="100")
-    img(src="images/webpack.svg" width="100")
-    p test
+    .wrapper-welcome
+        button.btn-autorization.wrapper-welcome__btn Авторизоваться
+        .greeting-container.wraperr-welcome__greeting-container
+            .greeting-container__face
+                .img-container.greeting-container__img
+                img.img-container__avatar
+
+            .greeting-container__back

@@ -1,0 +1,60 @@
+@mixin sansus() {
+  font-family: 'Sansus-Webissimo', Helvetica, sans-serif;
+}
+
+@mixin roboto($weight: normal, $style: normal) {
+  font-family: Roboto, Helvetica, sans-serif;
+  @if $weight == regular {
+    font-weight: normal;
+  } @else if $weight == light {
+    font-weight: 300;
+  } @else if $weight == medium {
+    font-weight: 500;
+  } @else if $weight == bold {
+    font-weight: bold;
+  }
+  
+  @if $style == regular {
+    font-style: normal;
+  } @else if $style == italic {
+    font-style: italic;
+  }
+}
+
+@function rem($px){
+  @return $px / 16px + 0rem
+}
+
+@mixin small-monitor {
+  @media screen and (max-width: $small-monitor) {
+    @content;
+  }
+}
+
+@mixin tablets {
+  @media screen and (max-width: $tablets) {
+    @content;
+  }
+}
+
+@mixin phones {
+  @media screen and (max-width: $phones) {
+    @content;
+  }
+}
+
+@mixin title ($color-title: #ffffff) {
+  @include sansus();
+  font-size: rem(63px);
+  color: $color-title;
+  padding: rem(70px) 0;
+  margin: 0;
+}
+
+@mixin subtitle ($color-subtitle: #ffffff) {
+  @include sansus();
+  font-size: rem(35px);
+  color: $color-subtitle;
+  padding-bottom: rem(40px);
+  margin: 0;
+}

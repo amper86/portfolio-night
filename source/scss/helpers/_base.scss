@@ -1,24 +1,42 @@
-@font-face {
-  font-family: 'Ubuntu';
-  src: url('../../fonts/ubuntu-b-webfont.woff2') format('woff2'),
-  url('../../fonts/ubuntu-b-webfont.woff') format('woff'),
-  url('../../fonts/ubuntu-b-webfont.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
-
 html,
 body{
   width: 100%;
+  font-size: 16px;
 }
 body{
-  background-color: gray;
+  line-height: 1.42;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-p {
-  color: red;
+// style reset
+* {
+  box-sizing: border-box;
 }
-.from-index {
-  border: 2px dotted brown;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  font-weight: normal;
 }
 
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  li {
+    list-style: none;
+  }
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
 

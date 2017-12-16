@@ -1,13 +1,5 @@
+@import "../../scss/helpers/fonts";
+@import "../../scss/helpers/variables";
+@import "../../scss/helpers/mixins";
 @import "../../scss/helpers/base";
 
-h1 {
-  /*font-family: Ubuntu, sans-serif;*/
-  color: green;
-  font-size: 3em;
-  border: 1px solid yellow;
-}
-.from-index {
-  color: darkblue;
-  font-weight: bold;
-  font-size: 2em;
-}
