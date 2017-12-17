@@ -1,5 +1,5 @@
 import './works.pug';
 import 'normalize.css';
-import './works.scss';
+import '../../scss/main.scss';
 
 console.log('works');

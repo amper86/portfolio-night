@@ -5,12 +5,53 @@ block head
 
 block content
     .wrapper-welcome
-        button.btn-autorization.wrapper-welcome__btn Авторизоваться
+        button.btn-autorization.wrapper-welcome__btn(type='button') Авторизоваться
         .greeting-container.wraperr-welcome__greeting-container
             .greeting-container__face
                 .img-container.greeting-container__img
-                    img.img-container__avatar
+                    img.img-container__avatar(src=require('../../images/avatar.jpg'))
                 .info.greeting-container__info
                     h1.info__name Владимир Астахов
                     p.info__description Личный сайт веб разработчика
+                ul.socials.greeting-container__socials
+                    each social in ['vk', 'github', 'in']
+                        li.socials__item
+                            a(href='#' class=`socials__link ` + `socials__link_${social}`)
+                                svg.socials__icon(width='26px' height='26px')
+                                    use(xlink:href=require('../../images/icons/sprite.svg') + `#${social}`)
+                nav.greeting-container__nav
+                    ul.nav-list
+                        each nav in ['Мои работы', 'Обо мне', 'Блог']
+                            li.nav-list__item
+                                a.nav-list__link #{nav}
             .greeting-container__back
+                h2.greeting-container__autorization-title АТОРИЗУЙТЕСЬ
+                .form
+                    form.form__elem(method='post' id='form-auth')
+                        .form__row
+                            label.form__label(for='login')
+                                i(class='fa fa-user' aria-hidden='true')
+                            input.form__input(type='text' id='login' name='login' placeholder='Логин')
+                        .form__row
+                            label.form__label(for='password')
+                                i(class='fa fa-key' aria-hidden='true')
+                            input.form__input(type='password' id='password' name='password' placeholder='Пароль')
+                        .form__row
+                            input.form__input(type='checkbox' value='1' id='human' name='human' checked)
+                            label.form__label(for='human') Я человек
+                        .form__row
+                            span.form__text Вы точно не робот?
+                        .form__row
+                            .form__block
+                                input.form__input#testyes(type='radio' name='test' value='человек' checked)
+                                label.form__label(for='testyes') Да
+                            .form__block
+                                input.form__input#testno(type='radio' name='test' value='робот')
+                                label.form__label(for='testno') Не уверен
+                        .form__row
+                            .form__block
+                                button.form__btn(type='button') На главную
+                            .form__block
+                                button.form__btn(type='submit') Авторизоваться
+        footer.footer-welcome.wrapper-welcome__footer
+            p.copyright &copy;	Владимир Астахов | Создано с любовью в Loftschool | 2017

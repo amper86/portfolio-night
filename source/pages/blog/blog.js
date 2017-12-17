@@ -1,5 +1,5 @@
 import './blog.pug';
 import 'normalize.css';
-import './blog.scss';
+import '../../scss/main.scss';
 
 console.log('blog');
