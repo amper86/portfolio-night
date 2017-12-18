@@ -1,0 +1,21 @@
+.socials {
+  display: flex;
+  &__item {
+    margin-right: rem(24px);
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__icon {
+    width: rem(26px);
+    height: rem(26px);
+  }
+  &__link_welcome:hover .socials__icon {
+    fill-opacity: 1;
+  }
+  &__link_welcome .socials__icon {
+    fill: #004cd1;
+    fill-opacity: .5;
+    transition: .3s linear;
+  }
+}

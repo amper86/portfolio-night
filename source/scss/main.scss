@@ -4,4 +4,13 @@
 @import "helpers/base";
 @import "helpers/font-awesome.min";
 
-@import "pages/welcome/welcome";
+@import "components/socials";
+@import "components/copyright";
+@import "components/img-container";
+@import "components/nav-list";
+
+@import "index/wrapper-welcome";
+@import "index/btn-autorization";
+@import "index/greeting-container";
+@import "index/info";
+@import "index/form";

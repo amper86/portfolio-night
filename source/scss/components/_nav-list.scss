@@ -1,0 +1,28 @@
+.nav-list {
+  display: flex;
+  &__item {
+    &_welcome {
+      width: 33.33%;
+      border-right: 2px solid rgba(255,255,255, .5);
+      &:last-child {
+        border-right: none;
+      }
+    }
+    & .nav-list__link {
+      background-color: $light;
+      &:hover {
+        background-color: rgba($dark, .85);
+      }
+    }
+  }
+  &__link {
+    display: inline-block;
+    padding: rem(15px) 0;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    @include roboto(medium, regular);
+    transition: .3s linear;
+  }
+}

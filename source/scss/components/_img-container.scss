@@ -1,0 +1,7 @@
+.img-container {
+  border-radius: 50%;
+  overflow: hidden;
+  &__avatar {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,54 @@
+.form {
+  &__wrapper {
+    padding: 0 rem(20px);
+  }
+  &__row-text {
+    width: 100%;
+    margin-bottom: rem(20px);
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: #ffffff;
+  }
+  &__label-text {
+    width: rem(45px);
+    height: rem(45px);
+    color: #c4cbcd;
+    background-color: #f0efe9;
+    text-align: center;
+    line-height: rem(45px);
+    border: none;
+    cursor: pointer;
+  }
+  &__input-text {
+    width: 100%;
+    padding: 0 rem(20px);
+    height: rem(45px);
+    border: none;
+    outline: none;
+    color: #373e42;
+  }
+  &__row-checkbox {
+    margin-bottom: rem(20px);
+    text-align: center;
+  }
+  &__input-checkbox {
+    position: absolute;
+    left: -9999px;
+  }
+  &__label-checkbox {
+    &:before {
+      content: '';
+      width: 20px;
+      height: 20px;
+      border-radius: 2px;
+      display: inline-block;
+      background-color: #ffffff;
+      vertical-align: middle;
+      margin-right: 20px;
+      transition: .3s linear;
+    }
+  }
+  &__input-checkbox:checked + &__label-checkbox:before {
+    background-color: $light;
+  }
+}
