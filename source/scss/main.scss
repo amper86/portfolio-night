@@ -6,11 +6,16 @@
 
 @import "components/socials";
 @import "components/copyright";
+@import "components/greeting-container";
 @import "components/img-container";
+@import "components/info";
 @import "components/nav-list";
+@import "components/header";
+@import "components/burger";
+@import "components/triangle";
 
 @import "index/wrapper-welcome";
 @import "index/btn-autorization";
-@import "index/greeting-container";
-@import "index/info";
 @import "index/form";
+
+@import "about/about";

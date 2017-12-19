@@ -46,3 +46,7 @@ body {
   color: $color-text;
   font-size: rem(16px);
 }
+.wrapper {
+  position: relative;
+  /*overflow: hidden;*/
+}

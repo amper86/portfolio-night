@@ -9,6 +9,7 @@ html
         script(src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
         <![endif]-->
     body
-        block header
-        block content
-        block footer
+        .wrapper
+            include components/header
+            block content
+            include components/footer

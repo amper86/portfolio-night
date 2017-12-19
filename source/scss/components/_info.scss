@@ -1,4 +1,6 @@
 .info {
+  text-align: center;
+  color: #ffffff;
   &__name {
     @include roboto(medium, regular);
     font-size: rem(28px);
