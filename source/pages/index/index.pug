@@ -34,19 +34,18 @@ block content
                             .form__row-checkbox
                                 input.form__input-checkbox(type='checkbox' value='1' id='human' name='human' checked)
                                 label.form__label-checkbox(for='human') Я человек
-                            .form__row
-                                span.form__text Вы точно не робот?
-                            .form__row
-                                .form__block
-                                    input.form__input#testyes(type='radio' name='test' value='человек' checked)
+                            .form__row-question
+                                span.form__question Вы точно не робот?
+                            .form__row-radio
+                                .form__block-radio
+                                    input.form__input-radio#testyes(type='radio' name='test' value='человек' checked)
                                     label.form__label-radio(for='testyes') Да
-                                .form__block
-                                    input.form__input#testno(type='radio' name='test' value='робот')
+                                .form__block-radio
+                                    input.form__input-radio#testno(type='radio' name='test' value='робот')
                                     label.form__label-radio(for='testno') Не уверен
                         .form__nav
-                            .form__block
-                                button.form__btn(type='button') На главную
-                            .form__block
-                                button.form__btn(type='submit') Авторизоваться
+                            button.form__nav-btn(type='button') На главную
+                            button.form__nav-btn(type='submit') Авторизоваться
         footer.wrapper-welcome__footer
             p.copyright &copy;	Владимир Астахов | Создано с любовью в Loftschool | 2017
+            //ToDo: Сделать flip в greeting-container.scss

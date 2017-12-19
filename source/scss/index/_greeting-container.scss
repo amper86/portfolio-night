@@ -3,7 +3,7 @@
   background-color: $transp-bg;
   color: #ffffff;
   &__face {
-    display: none;
+
   }
   &__main {
     padding: rem(40px) rem(20px) 0;
@@ -23,7 +23,7 @@
     margin-bottom: rem(30px);
   }
   &__back {
-
+    display: none;
   }
   &__autorization-title {
     padding: rem(40px) rem(20px) 0;
