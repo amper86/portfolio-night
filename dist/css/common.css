@@ -2771,6 +2771,13 @@ body {
     fill: #004cd1;
     fill-opacity: .5;
     transition: .3s linear; }
+  .socials__link_footer:hover .socials__icon {
+    fill: #004cd1;
+    fill-opacity: 1; }
+  .socials__link_footer .socials__icon {
+    fill: #ffffff;
+    fill-opacity: .5;
+    transition: .3s linear; }
   .socials__link_header:hover .socials__icon {
     fill: #004cd1; }
   .socials__link_header .socials__icon {
@@ -2868,13 +2875,15 @@ body {
     border-right: 2px solid rgba(255, 255, 255, 0.5); }
     .nav-list__item_welcome:last-child {
       border-right: none; }
-  .nav-list__item .nav-list__link {
-    background-color: #0548be; }
-    .nav-list__item .nav-list__link:hover {
-      background-color: rgba(8, 60, 150, 0.85); }
+    .nav-list__item_welcome .nav-list__link {
+      background-color: #0548be;
+      padding: 0.9375rem 0; }
+      .nav-list__item_welcome .nav-list__link:hover {
+        background-color: rgba(8, 60, 150, 0.85); }
+  .nav-list__item_footer {
+    margin-right: 2.5rem; }
   .nav-list__link {
     display: inline-block;
-    padding: 0.9375rem 0;
     width: 100%;
     text-align: center;
     text-decoration: none;
@@ -2944,6 +2953,76 @@ body {
   .text-content p {
     margin-bottom: 1.5625rem;
     line-height: 1.5rem; }
+
+.skills-row {
+  margin-bottom: 1.25rem; }
+  .skills-row__title {
+    font-family: Roboto, Helvetica, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.75rem;
+    color: #474b57;
+    margin-bottom: 1.25rem; }
+  .skills-row__list {
+    display: flex;
+    flex-wrap: wrap; }
+  .skills-row__item {
+    margin-right: 2.5rem; }
+    .skills-row__item:last-child {
+      margin-right: 0; }
+  .skills-row__container {
+    position: relative; }
+  .skills-row__circle {
+    width: 7.5rem;
+    height: 7.5rem; }
+  .skills-row__title-skill {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    color: #243994;
+    font-family: Roboto, Helvetica, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 0.875rem;
+    text-align: center; }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #ffffff;
+  font-family: Roboto, Helvetica, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1rem; }
+  .footer__container {
+    background-color: rgba(28, 31, 41, 0.85);
+    display: flex;
+    padding: 1.875rem 0; }
+  .footer__col {
+    width: 33.33%;
+    padding: 0 1.875rem;
+    border-right: 1px solid rgba(255, 255, 255, 0.2); }
+    .footer__col:last-child {
+      border-right: none; }
+  .footer__col-left p {
+    margin-bottom: 0.625rem; }
+  .footer__nav {
+    margin-bottom: 1.875rem; }
+  .footer__item {
+    margin-bottom: 0.625rem; }
+    .footer__item:last-child {
+      margin-bottom: 0; }
+  .footer__link {
+    color: #ffffff;
+    text-decoration: none; }
+  .footer__copyright {
+    background-color: rgba(8, 60, 150, 0.85);
+    text-align: center;
+    padding: 0.625rem 0; }
 
 .wrapper-welcome {
   width: 100%;
@@ -3161,3 +3240,55 @@ body {
   .user-description__title {
     text-align: center;
     margin: 1.875rem 0 1.875rem 0; }
+
+.map {
+  height: 100vh;
+  width: 100%;
+  position: relative; }
+  .map__google {
+    width: 100%;
+    height: 100%;
+    background: lightseagreen; }
+  .map__contacts {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
+.contacts {
+  width: 580px;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 1.5625rem 1.25rem; }
+  .contacts__title {
+    text-align: center;
+    margin-bottom: 1.875rem; }
+  .contacts__list {
+    display: flex;
+    flex-wrap: wrap; }
+  .contacts__item {
+    width: 50%;
+    margin-bottom: 1.875rem; }
+    .contacts__item:nth-child(1) {
+      order: 0; }
+    .contacts__item:nth-child(2) {
+      order: 15; }
+    .contacts__item:nth-child(3) {
+      order: 10; }
+    .contacts__item:nth-child(4) {
+      order: 20; }
+
+.contacts-block__icon {
+  display: inline-block;
+  fill: #024dd1;
+  width: 2.8125rem;
+  height: 2.8125rem;
+  vertical-align: middle;
+  margin-right: 0.625rem; }
+
+.contacts-block__link {
+  display: inline-block;
+  text-decoration: none;
+  font-family: Roboto, Helvetica, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #474b57; }

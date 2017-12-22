@@ -38,27 +38,28 @@ mixin test
                     ul.skills-row__list
                         - for (var i=1; i<item.length; i++)
                             li.skills-row__item
-                                .skill
-                                    svg.skill__circle
-                                        circle.skills__image-bg(r="45" cx="50%" cy="50%" fill="none")
-                                        circle.skills__image-level(r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)")
-                                    .skill__title #{item[i]}
+                                .skills-row__container
+                                    svg.skills-row__circle
+                                        circle.skills-row__image-bg(r="60" cx="50" cy="60" fill="none")
+                                        circle.skills-row__image-level(r="60" cx="50" cy="60" transform="rotate(-90 55 55)")
+                                    .skills-row__title-skill #{item[i]}
 
 mixin info
     -
         var contacts = [
-        ['skype_kdn', 'skype_n_test'],
-        ['astahov@gmail.com', 'envelope_n'],
-        ['+7 931 200 93 24', 'phone_n'],
-        ['Новосибирск', 'map_n']
+        ['skype_kdn', 'skype_n_test', 'skype:'],
+        ['astahov@gmail.com', 'envelope_n', 'mailto:'],
+        ['+7 931 200 93 24', 'phone_n', 'tel:'],
+        ['Новосибирск', 'map_n', '#']
         ]
     ul.contacts__list
         each contact in contacts
             li.contacts__item
                 .contacts-block
-                    svg(class=`contacts-block__icon` + `contacts-block__icon_` + `${contact[1]}` width='30px' height='30px')
+                    svg(class='contacts-block__icon ' + 'contacts-block__icon_' + `${contact[1]}`)
                         use(xlink:href=require('../../images/icons/sprite.svg') + `#${contact[1]}`)
-                    span.contacts-block__content #{contact[0]}
+                    a.contacts-block__link(href=`${contact[2]}` + `${contact[0]}`) #{contact[0]}
+
 
 mixin info-footer
     -
@@ -71,7 +72,7 @@ mixin info-footer
     ul.footer__contact-list
         each item in info
             li.footer__item
-                a.footer_link(href=`${item[0]}` + `${item[1]}`) #{item[1]}
+                a.footer__link(href=`${item[0]}` + `${item[1]}`) #{item[1]}
 
-mixin copyright
-    p.copyright &copy;	Владимир Астахов | Создано с любовью в Loftschool | 2017
+mixin copyright(className)
+    p(class='copyright ' + `${className}`) &copy;	Владимир Астахов | Создано с любовью в Loftschool | 2017

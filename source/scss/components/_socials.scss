@@ -18,6 +18,15 @@
     fill-opacity: .5;
     transition: .3s linear;
   }
+  &__link_footer:hover .socials__icon {
+    fill: #004cd1;
+    fill-opacity: 1;
+  }
+  &__link_footer .socials__icon {
+    fill: #ffffff;
+    fill-opacity: .5;
+    transition: .3s linear;
+  }
   &__link_header:hover .socials__icon {
     fill: #004cd1;
   }

@@ -1,0 +1,43 @@
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #ffffff;
+  @include roboto(light, regular);
+  font-size: rem(16px);
+  &__container {
+    background-color: rgba(28,31,41, .85);
+    display: flex;
+    padding: rem(30px) 0;
+  }
+  &__col {
+    width: 33.33%;
+    padding: 0 rem(30px);
+    border-right: 1px solid rgba(255,255,255, .2);
+    &:last-child {
+      border-right: none;
+    }
+  }
+  &__col-left p {
+    margin-bottom: rem(10px);
+  }
+  &__nav {
+    margin-bottom: rem(30px);
+  }
+  &__item {
+    margin-bottom: rem(10px);
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__link {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  &__copyright {
+    background-color: rgba($dark, .85);
+    text-align: center;
+    padding: rem(10px) 0;
+  }
+}
