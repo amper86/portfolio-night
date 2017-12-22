@@ -40,20 +40,20 @@
       </header>
       <section class="about">
         <div class="about__triangle-blog">
-          <svg class="about__triangle-white" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveAspectRatio="none">
+          <svg class="about__triangle-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveAspectRatio="none">
             <polygon class="about__triangle_left" fill="#f2f0e8" points="0,0 0,86 500.8,86 500.8,75.5"></polygon>
             <polygon class="about__triangle_right" fill="#eae8e2" points="1000,0 1000,86 500,86 500,75.5"></polygon>
           </svg>
         </div>
         <div class="about__left">
           <div class="about__left-title">
-            <h1 class="block-title">Обо мне</h1>
+            <h1 class="block-title about__block-title">Обо мне</h1>
           </div>
           <div class="about__left-content">
             <div class="user-description">
-              <div class="user-description__img-container"><img class="user-description__img"></div>
+              <div class="user-description__img-container"><img class="user-description__img" src="images/about-photo.jpg"></div>
               <div class="user-description__title">
-                <h2 class="block__subtitle">Кто я</h2>
+                <h2 class="block-subtitle">Кто я</h2>
               </div>
               <div class="user-description__text text-content">
                 <p>Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.</p>
@@ -64,7 +64,7 @@
         </div>
         <div class="about__right">
           <div class="about__right-title">
-            <h2 class="block-subtitle">Чем я вам могу быть полезен</h2>
+            <h2 class="block-subtitle">Чем я могу быть вам полезен</h2>
           </div>
           <div class="about__right-text text-content">
             <p>Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.</p>
@@ -73,104 +73,205 @@
             <ul class="skills-list">
               <li class="skills-list__item">
                 <div class="skills-row">
-                  <h3 class="skills-row__title">Frontend
-                    <ul class="skills-row__list">
-                      <li class="skill-row__item"></li>
+                  <div class="skills-row__title">Frontend</div>
+                  <ul class="skills-row__list">
+                    <li class="skills-row__item">
                       <div class="skill">
-                        <svg class="skill__circle"></svg>
-                        <div class="skill__title">HTML5
-                          <!--Todo: разобраться тут с навыками что то идет не так!!!//во враппере закоментирован оверфлоу
-                          -->
-                        </div>
+                        <svg class="skill__circle">
+                          <circle class="skills__image-bg" r="45" cx="50%" cy="50%" fill="none"></circle>
+                          <circle class="skills__image-level" r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)"></circle>
+                        </svg>
+                        <div class="skill__title">HTML5</div>
                       </div>
-                      <li class="skill-row__item"></li>
+                    </li>
+                    <li class="skills-row__item">
                       <div class="skill">
-                        <svg class="skill__circle"></svg>
-                        <div class="skill__title">CSS3
-                          <!--Todo: разобраться тут с навыками что то идет не так!!!//во враппере закоментирован оверфлоу
-                          -->
-                        </div>
+                        <svg class="skill__circle">
+                          <circle class="skills__image-bg" r="45" cx="50%" cy="50%" fill="none"></circle>
+                          <circle class="skills__image-level" r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)"></circle>
+                        </svg>
+                        <div class="skill__title">CSS3</div>
                       </div>
-                      <li class="skill-row__item"></li>
+                    </li>
+                    <li class="skills-row__item">
                       <div class="skill">
-                        <svg class="skill__circle"></svg>
-                        <div class="skill__title">JavaScript &amp; JQuery
-                          <!--Todo: разобраться тут с навыками что то идет не так!!!//во враппере закоментирован оверфлоу
-                          -->
-                        </div>
+                        <svg class="skill__circle">
+                          <circle class="skills__image-bg" r="45" cx="50%" cy="50%" fill="none"></circle>
+                          <circle class="skills__image-level" r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)"></circle>
+                        </svg>
+                        <div class="skill__title">JavaScript &amp; jQuery</div>
                       </div>
-                    </ul>
-                  </h3>
+                    </li>
+                  </ul>
                 </div>
               </li>
               <li class="skills-list__item">
                 <div class="skills-row">
-                  <h3 class="skills-row__title">Backend
-                    <ul class="skills-row__list">
-                      <li class="skill-row__item"></li>
+                  <div class="skills-row__title">Backend</div>
+                  <ul class="skills-row__list">
+                    <li class="skills-row__item">
                       <div class="skill">
-                        <svg class="skill__circle"></svg>
-                        <div class="skill__title">HTML5
-                          <!--Todo: разобраться тут с навыками что то идет не так!!!//во враппере закоментирован оверфлоу
-                          -->
-                        </div>
+                        <svg class="skill__circle">
+                          <circle class="skills__image-bg" r="45" cx="50%" cy="50%" fill="none"></circle>
+                          <circle class="skills__image-level" r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)"></circle>
+                        </svg>
+                        <div class="skill__title">PHP</div>
                       </div>
-                      <li class="skill-row__item"></li>
+                    </li>
+                    <li class="skills-row__item">
                       <div class="skill">
-                        <svg class="skill__circle"></svg>
-                        <div class="skill__title">CSS3
-                          <!--Todo: разобраться тут с навыками что то идет не так!!!//во враппере закоментирован оверфлоу
-                          -->
-                        </div>
+                        <svg class="skill__circle">
+                          <circle class="skills__image-bg" r="45" cx="50%" cy="50%" fill="none"></circle>
+                          <circle class="skills__image-level" r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)"></circle>
+                        </svg>
+                        <div class="skill__title">mySQL</div>
                       </div>
-                      <li class="skill-row__item"></li>
+                    </li>
+                    <li class="skills-row__item">
                       <div class="skill">
-                        <svg class="skill__circle"></svg>
-                        <div class="skill__title">JavaScript &amp; JQuery
-                          <!--Todo: разобраться тут с навыками что то идет не так!!!//во враппере закоментирован оверфлоу
-                          -->
-                        </div>
+                        <svg class="skill__circle">
+                          <circle class="skills__image-bg" r="45" cx="50%" cy="50%" fill="none"></circle>
+                          <circle class="skills__image-level" r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)"></circle>
+                        </svg>
+                        <div class="skill__title">Node.js &amp; npm</div>
                       </div>
-                    </ul>
-                  </h3>
+                    </li>
+                    <li class="skills-row__item">
+                      <div class="skill">
+                        <svg class="skill__circle">
+                          <circle class="skills__image-bg" r="45" cx="50%" cy="50%" fill="none"></circle>
+                          <circle class="skills__image-level" r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)"></circle>
+                        </svg>
+                        <div class="skill__title">Mongo.db</div>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </li>
               <li class="skills-list__item">
                 <div class="skills-row">
-                  <h3 class="skills-row__title">Workflow
-                    <ul class="skills-row__list">
-                      <li class="skill-row__item"></li>
+                  <div class="skills-row__title">WorkFlow</div>
+                  <ul class="skills-row__list">
+                    <li class="skills-row__item">
                       <div class="skill">
-                        <svg class="skill__circle"></svg>
-                        <div class="skill__title">HTML5
-                          <!--Todo: разобраться тут с навыками что то идет не так!!!//во враппере закоментирован оверфлоу
-                          -->
-                        </div>
+                        <svg class="skill__circle">
+                          <circle class="skills__image-bg" r="45" cx="50%" cy="50%" fill="none"></circle>
+                          <circle class="skills__image-level" r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)"></circle>
+                        </svg>
+                        <div class="skill__title">Git</div>
                       </div>
-                      <li class="skill-row__item"></li>
+                    </li>
+                    <li class="skills-row__item">
                       <div class="skill">
-                        <svg class="skill__circle"></svg>
-                        <div class="skill__title">CSS3
-                          <!--Todo: разобраться тут с навыками что то идет не так!!!//во враппере закоментирован оверфлоу
-                          -->
-                        </div>
+                        <svg class="skill__circle">
+                          <circle class="skills__image-bg" r="45" cx="50%" cy="50%" fill="none"></circle>
+                          <circle class="skills__image-level" r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)"></circle>
+                        </svg>
+                        <div class="skill__title">Gulp</div>
                       </div>
-                      <li class="skill-row__item"></li>
+                    </li>
+                    <li class="skills-row__item">
                       <div class="skill">
-                        <svg class="skill__circle"></svg>
-                        <div class="skill__title">JavaScript &amp; JQuery
-                          <!--Todo: разобраться тут с навыками что то идет не так!!!//во враппере закоментирован оверфлоу
-                          -->
-                        </div>
+                        <svg class="skill__circle">
+                          <circle class="skills__image-bg" r="45" cx="50%" cy="50%" fill="none"></circle>
+                          <circle class="skills__image-level" r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)"></circle>
+                        </svg>
+                        <div class="skill__title">Bower</div>
                       </div>
-                    </ul>
-                  </h3>
+                    </li>
+                  </ul>
                 </div>
               </li>
             </ul>
           </div>
         </div>
       </section>
+      <section class="map">
+        <div class="map__google"></div>
+        <div class="map__contacts">
+          <div class="contacts">
+            <div class="contacts__title">
+              <div class="block-subtitle">Контакты</div>
+            </div>
+            <ul class="contacts__list">
+              <li class="contacts__item">
+                <div class="contacts-block">
+                  <svg class="contacts-block__iconcontacts-block__icon_skype_n_test" width="30px" height="30px">
+                    <use xlink:href="images/sprite.svg#skype_n_test"></use>
+                  </svg><span class="contacts-block__content">skype_kdn</span>
+                </div>
+              </li>
+              <li class="contacts__item">
+                <div class="contacts-block">
+                  <svg class="contacts-block__iconcontacts-block__icon_envelope_n" width="30px" height="30px">
+                    <use xlink:href="images/sprite.svg#envelope_n"></use>
+                  </svg><span class="contacts-block__content">astahov@gmail.com</span>
+                </div>
+              </li>
+              <li class="contacts__item">
+                <div class="contacts-block">
+                  <svg class="contacts-block__iconcontacts-block__icon_phone_n" width="30px" height="30px">
+                    <use xlink:href="images/sprite.svg#phone_n"></use>
+                  </svg><span class="contacts-block__content">+7 931 200 93 24</span>
+                </div>
+              </li>
+              <li class="contacts__item">
+                <div class="contacts-block">
+                  <svg class="contacts-block__iconcontacts-block__icon_map_n" width="30px" height="30px">
+                    <use xlink:href="images/sprite.svg#map_n"></use>
+                  </svg><span class="contacts-block__content">Новосибирск</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="footer__container">
+          <div class="footer__col footer__col-left">
+            <p>Этот сайт я сделал в рамках обучения в Школе</p>
+            <p>онлайн образования LoftSchool.</p>
+          </div>
+          <div class="footer__col footer__col-center">
+            <nav class="footer__nav">
+              <!--infoNav принимает массив 0-путь ссылки 1-текст ссылки-->
+              <!--className принимает названия можификатора у li-->
+              <ul class="nav-list">
+                <li class="nav-list__item nav-list__item_footer"><a class="nav-list__link" href="./works.html">Мои работы</a></li>
+                <li class="nav-list__item nav-list__item_footer"><a class="nav-list__link" href="./about.html">Обо мне</a></li>
+                <li class="nav-list__item nav-list__item_footer"><a class="nav-list__link" href="./blog.html">Блог</a></li>
+                <li class="nav-list__item nav-list__item_footer"><a class="nav-list__link" href="./index.html">Авторизоваться</a></li>
+              </ul>
+            </nav>
+            <!--Социалки className-вводим класс родительского блока-->
+            <!--classStyle вводим имя модификатора для стилизации-->
+            <!--стили в _socials.scss-->
+            <ul class="socials footer__socials">
+              <li class="socials__item"><a class="socials__link socials__link_footer" href="https://vk.com/id3022300" target="_blank">
+                  <svg class="socials__icon">
+                    <use xlink:href="images/sprite.svg#vk"></use>
+                  </svg></a></li>
+              <li class="socials__item"><a class="socials__link socials__link_footer" href="https://github.com/amper86" target="_blank">
+                  <svg class="socials__icon">
+                    <use xlink:href="images/sprite.svg#github"></use>
+                  </svg></a></li>
+              <li class="socials__item"><a class="socials__link socials__link_footer" href="https://ru.linkedin.com" target="_blank">
+                  <svg class="socials__icon">
+                    <use xlink:href="images/sprite.svg#in"></use>
+                  </svg></a></li>
+            </ul>
+          </div>
+          <div class="footer__col footer__col-right">
+            <ul class="footer__contact-list">
+              <li class="footer__item"><a class="footer_link" href="skype:skype_kdn">skype_kdn</a></li>
+              <li class="footer__item"><a class="footer_link" href="mailto:astahov@gmail.com">astahov@gmail.com</a></li>
+              <li class="footer__item"><a class="footer_link" href="tel:+7 931 200 93 24">+7 931 200 93 24</a></li>
+              <li class="footer__item"><a class="footer_link" href="#Новосибирск">Новосибирск</a></li>
+            </ul>
+          </div>
+        </div>
+        <p class="copyright">&copy;	Владимир Астахов | Создано с любовью в Loftschool | 2017</p>
+      </footer>
     </div>
   <script type="text/javascript" src="./js/common.js"></script><script type="text/javascript" src="./js/about.js"></script></body>
 </html>

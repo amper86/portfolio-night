@@ -22,3 +22,56 @@ mixin navigation(infoNav, className)
         each nav in infoNav
             li(class='nav-list__item ' + 'nav-list__item_' + `${className}`)
                 a.nav-list__link(href=`${nav[0]}`) #{nav[1]}
+
+mixin test
+    -
+        var skills = {
+        frontend: ["Frontend", "HTML5", "CSS3", "JavaScript & jQuery"],
+        backend: ["Backend", "PHP", "mySQL", "Node.js & npm", "Mongo.db"],
+        workFlow: ["WorkFlow", "Git", "Gulp", "Bower"]
+        };
+    ul.skills-list
+        each item in skills
+            li.skills-list__item
+                .skills-row
+                    .skills-row__title #{item[0]}
+                    ul.skills-row__list
+                        - for (var i=1; i<item.length; i++)
+                            li.skills-row__item
+                                .skill
+                                    svg.skill__circle
+                                        circle.skills__image-bg(r="45" cx="50%" cy="50%" fill="none")
+                                        circle.skills__image-level(r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)")
+                                    .skill__title #{item[i]}
+
+mixin info
+    -
+        var contacts = [
+        ['skype_kdn', 'skype_n_test'],
+        ['astahov@gmail.com', 'envelope_n'],
+        ['+7 931 200 93 24', 'phone_n'],
+        ['Новосибирск', 'map_n']
+        ]
+    ul.contacts__list
+        each contact in contacts
+            li.contacts__item
+                .contacts-block
+                    svg(class=`contacts-block__icon` + `contacts-block__icon_` + `${contact[1]}` width='30px' height='30px')
+                        use(xlink:href=require('../../images/icons/sprite.svg') + `#${contact[1]}`)
+                    span.contacts-block__content #{contact[0]}
+
+mixin info-footer
+    -
+        var info = [
+            ['skype:', 'skype_kdn'],
+            ['mailto:', 'astahov@gmail.com'],
+            ['tel:', '+7 931 200 93 24'],
+            ['#', 'Новосибирск']
+        ]
+    ul.footer__contact-list
+        each item in info
+            li.footer__item
+                a.footer_link(href=`${item[0]}` + `${item[1]}`) #{item[1]}
+
+mixin copyright
+    p.copyright &copy;	Владимир Астахов | Создано с любовью в Loftschool | 2017

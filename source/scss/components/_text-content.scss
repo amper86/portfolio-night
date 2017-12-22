@@ -1,0 +1,9 @@
+.text-content {
+  @include roboto(regular, regular);
+  font-size: rem(16px);
+  color: $gray;
+  p {
+    margin-bottom: rem(25px);
+    line-height: rem(24px);
+  }
+}

@@ -6,37 +6,33 @@ block head
 block content
     section.about
         .about__triangle-blog
-            svg.about__triangle-white(xmlns="http://www.w3.org/2000/svg", viewbox='0 0 1000 85', preserveAspectRatio="none")
+            svg.about__triangle-icon(xmlns="http://www.w3.org/2000/svg", viewbox='0 0 1000 85', preserveAspectRatio="none")
                 polygon.about__triangle_left(fill="#f2f0e8" points="0,0 0,86 500.8,86 500.8,75.5" )
                 polygon.about__triangle_right( fill="#eae8e2" points="1000,0 1000,86 500,86 500,75.5" )
         .about__left
             .about__left-title
-                h1.block-title Обо мне
+                h1.block-title.about__block-title Обо мне
             .about__left-content
                 .user-description
                     .user-description__img-container
-                        img.user-description__img
+                        img.user-description__img(src=require('../../images/about-photo.jpg'))
                     .user-description__title
-                        h2.block__subtitle Кто я
+                        h2.block-subtitle Кто я
                     .user-description__text.text-content
                         p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
                         p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
         .about__right
             .about__right-title
-                h2.block-subtitle Чем я вам могу быть полезен
+                h2.block-subtitle Чем я могу быть вам полезен
             .about__right-text.text-content
                 p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
             .about__right-content
-                ul.skills-list
-                    each item in ['Frontend', 'Backend', 'Workflow']
-                        li.skills-list__item
-                            .skills-row
-                                h3.skills-row__title #{item}
-                                    ul.skills-row__list
-                                        each skill in ['HTML5', 'CSS3', 'JavaScript & JQuery']
-                                            li.skill-row__item
-                                            .skill
-                                                svg.skill__circle
-                                                .skill__title #{skill}
-                                                    //Todo: разобраться тут с навыками что то идет не так!!!
-                                                        //во враппере закоментирован оверфлоу
+                +test
+    section.map
+        .map__google
+        .map__contacts
+            .contacts
+                .contacts__title
+                    .block-subtitle Контакты
+                +info
+                //todo: закончил на стилизации скиллов

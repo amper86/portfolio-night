@@ -5,6 +5,7 @@
 @import "helpers/font-awesome.min";
 
 @import "components/socials";
+@import "components/block";
 @import "components/copyright";
 @import "components/greeting-container";
 @import "components/img-container";
@@ -13,9 +14,11 @@
 @import "components/header";
 @import "components/burger";
 @import "components/triangle";
+@import "components/text-content";
 
 @import "index/wrapper-welcome";
 @import "index/btn-autorization";
 @import "index/form";
 
 @import "about/about";
+@import "about/user-description";

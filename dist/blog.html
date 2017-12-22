@@ -39,6 +39,52 @@
           </svg></a>
       </header>
       <h1>Блог страница</h1>
+      <footer class="footer">
+        <div class="footer__container">
+          <div class="footer__col footer__col-left">
+            <p>Этот сайт я сделал в рамках обучения в Школе</p>
+            <p>онлайн образования LoftSchool.</p>
+          </div>
+          <div class="footer__col footer__col-center">
+            <nav class="footer__nav">
+              <!--infoNav принимает массив 0-путь ссылки 1-текст ссылки-->
+              <!--className принимает названия можификатора у li-->
+              <ul class="nav-list">
+                <li class="nav-list__item nav-list__item_footer"><a class="nav-list__link" href="./works.html">Мои работы</a></li>
+                <li class="nav-list__item nav-list__item_footer"><a class="nav-list__link" href="./about.html">Обо мне</a></li>
+                <li class="nav-list__item nav-list__item_footer"><a class="nav-list__link" href="./blog.html">Блог</a></li>
+                <li class="nav-list__item nav-list__item_footer"><a class="nav-list__link" href="./index.html">Авторизоваться</a></li>
+              </ul>
+            </nav>
+            <!--Социалки className-вводим класс родительского блока-->
+            <!--classStyle вводим имя модификатора для стилизации-->
+            <!--стили в _socials.scss-->
+            <ul class="socials footer__socials">
+              <li class="socials__item"><a class="socials__link socials__link_footer" href="https://vk.com/id3022300" target="_blank">
+                  <svg class="socials__icon">
+                    <use xlink:href="images/sprite.svg#vk"></use>
+                  </svg></a></li>
+              <li class="socials__item"><a class="socials__link socials__link_footer" href="https://github.com/amper86" target="_blank">
+                  <svg class="socials__icon">
+                    <use xlink:href="images/sprite.svg#github"></use>
+                  </svg></a></li>
+              <li class="socials__item"><a class="socials__link socials__link_footer" href="https://ru.linkedin.com" target="_blank">
+                  <svg class="socials__icon">
+                    <use xlink:href="images/sprite.svg#in"></use>
+                  </svg></a></li>
+            </ul>
+          </div>
+          <div class="footer__col footer__col-right">
+            <ul class="footer__contact-list">
+              <li class="footer__item"><a class="footer_link" href="skype:skype_kdn">skype_kdn</a></li>
+              <li class="footer__item"><a class="footer_link" href="mailto:astahov@gmail.com">astahov@gmail.com</a></li>
+              <li class="footer__item"><a class="footer_link" href="tel:+7 931 200 93 24">+7 931 200 93 24</a></li>
+              <li class="footer__item"><a class="footer_link" href="#Новосибирск">Новосибирск</a></li>
+            </ul>
+          </div>
+        </div>
+        <p class="copyright">&copy;	Владимир Астахов | Создано с любовью в Loftschool | 2017</p>
+      </footer>
     </div>
   <script type="text/javascript" src="./js/common.js"></script><script type="text/javascript" src="./js/blog.js"></script></body>
 </html>

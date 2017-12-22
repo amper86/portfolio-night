@@ -1,0 +1,14 @@
+.user-description {
+  padding: 0 rem(20px);
+  &__img-container {
+    width: 100%;
+    overflow: hidden;
+  }
+  &__img {
+    max-width: 100%;
+  }
+  &__title {
+    text-align: center;
+    margin: rem(30px) 0 rem(30px) 0;
+  }
+}
