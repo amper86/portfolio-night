@@ -1,6 +1,65 @@
-extends ../base
+extends ../template
+include ../helpers/_mixins
 
 block head
-    title Работы страница
+    title Мои работы
 block content
-    h1 Работы страница
+    +header('info__name', 'Владимир Астахов', 'Личный сайт веб разработчика')
+    section.works
+        .works__triangle
+            svg.works__triangle-icon(xmlns="http://www.w3.org/2000/svg", viewbox='0 0 1000 85', preserveAspectRatio="none")
+                polygon.works__triangle_left(fill="#f2f0e8" points="0,0 0,86 500.8,86 500.8,75.5" )
+                polygon.works__triangle_right( fill="#eae8e2" points="1000,0 1000,86 500,86 500,75.5" )
+            .works__title
+                h2.block-title.block-title_starts Мои работы
+        .slider
+            .slider-info
+                .slider-info__title
+                    h2.block-subtitle
+                .slider-info__text
+                    span HTML, CSS, JAVASCRIPT
+                a.slider-info__link(href='#')
+                    i(class='fa fa-link' aria-hidden='true')
+                    span.slider-info__link-text Посмотреть сайт
+            .slider-img
+                .slider-img__container
+            .slider-nav
+                ul.slider-nav__list.slider-nav__list_left
+                    li.slider-nav__item.item_1
+                    li.slider-nav__item.item_2
+                    li.slider-nav__item.item_3
+                ul.slider-nav__list.slider-nav__list_right
+                    li.slider-nav__item.item_1
+                    li.slider-nav__item.item_2
+                    li.slider-nav__item.item_3
+    section.about-me
+        .about-me__title
+            .block-title.block-title_stars
+        .about-me__comments
+            ul.comments-list
+                li.comments-list__item
+                    .comments-list__container-img
+                        img.comments-list__img
+                    .comments-list__text
+                        p
+                        span.comments-list__text-name
+                        span.comments-list__text-position
+        .about-me__form
+            .form-feedback
+                form.form-feedback__elem(method='post' id='form-feedback')
+                    .form-feedback__wpapper
+                        .form-feedback__title
+                            h2.block-title
+                        .form-feedback__row-text
+                            input.form-feedback__text(type='text' id='name' name='name' placeholder='Ваше имя')
+                        .form-feedback__row-text
+                            input.form-feedback__text(type='text' id='email' name='email' placeholder='Ваше email')
+                        .form-feedback__row-text
+                            input.form-feedback__text(type='textarea' id='message' name='message' placeholder='Ваше сообщение')
+                    .form-feedback__row-btn
+                        button.form-feedback_btn(type='submit') Отправить
+                        button.form-feedback_btn(type='reset') Очистить
+        .about-me__arrow-up
+            a(href='#' class='arrow-up')
+                svg.arrow-up__icon
+                    use(xlink:href=require('../../images/icons/sprite.svg') + '#portf_arrow_up')
