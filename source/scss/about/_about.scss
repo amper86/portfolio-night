@@ -1,17 +1,17 @@
 .about {
   width: 100%;
   position: relative;
-  margin-top: -10%;
+  margin-top: -5%;
   background-color: tomato;
   display: flex;
   &__triangle-blog {
     position: absolute;
-    bottom: 99.3%;
+    bottom: 99%;
     left: 0;
     right: 0;
   }
   &__triangle-icon {
-    height: 30vh;
+    height: 20vh;
     width: 100%;
   }
   &__left {

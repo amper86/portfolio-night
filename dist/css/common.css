@@ -547,6 +547,9 @@ body {
   position: relative;
   overflow: hidden; }
 
+.hide {
+  display: none; }
+
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -2862,6 +2865,13 @@ body {
     font-style: normal;
     font-size: 1.75rem;
     margin-bottom: 0; }
+  .info__title {
+    font-family: 'Sansus-Webissimo', Helvetica, sans-serif;
+    font-size: 3.9375rem;
+    color: #ffffff;
+    padding: 4.375rem 0;
+    margin: 0;
+    padding: 0; }
   .info__description {
     font-family: Roboto, Helvetica, sans-serif;
     font-weight: normal;
@@ -3198,16 +3208,16 @@ body {
 .about {
   width: 100%;
   position: relative;
-  margin-top: -10%;
+  margin-top: -5%;
   background-color: tomato;
   display: flex; }
   .about__triangle-blog {
     position: absolute;
-    bottom: 99.3%;
+    bottom: 99%;
     left: 0;
     right: 0; }
   .about__triangle-icon {
-    height: 30vh;
+    height: 20vh;
     width: 100%; }
   .about__left {
     background-color: #f2f0e8;
@@ -3292,3 +3302,71 @@ body {
   font-weight: 500;
   font-style: normal;
   color: #474b57; }
+
+.blog {
+  width: 100%;
+  padding: 4.375rem 0 18.75rem 0;
+  background-color: #faf8f0;
+  margin-top: -5%;
+  position: relative;
+  display: flex; }
+  .blog__triangle-blog {
+    position: absolute;
+    bottom: 99%;
+    left: 0;
+    right: 0; }
+  .blog__triangle-icon {
+    height: 20vh;
+    width: 100%; }
+  .blog__aside {
+    width: 28%;
+    margin-right: 5rem; }
+  .blog__content {
+    width: 72%; }
+
+.article-titles {
+  padding: 0 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; }
+  .article-titles__item {
+    text-align: right;
+    max-width: 17.5rem; }
+    .article-titles__item_active {
+      border-right: 3px solid #0548be; }
+      .article-titles__item_active .article-titles__link {
+        color: #0548be;
+        font-family: Roboto, Helvetica, sans-serif;
+        font-weight: bold;
+        font-style: normal; }
+  .article-titles__link {
+    display: inline-block;
+    padding: 0.9375rem;
+    text-decoration: none;
+    color: #455a64;
+    line-height: 1.625rem; }
+
+.article-list {
+  max-width: 54.375rem; }
+  .article-list__item {
+    border-bottom: 5px solid #ecebe4;
+    margin-bottom: 4.375rem; }
+    .article-list__item:last-child {
+      border-bottom: none;
+      margin-bottom: 0; }
+  .article-list__title {
+    font-family: 'Sansus-Webissimo', Helvetica, sans-serif;
+    font-size: 2.1875rem;
+    color: #474b57;
+    padding-bottom: 2.5rem;
+    margin: 0;
+    padding-bottom: 1.875rem; }
+  .article-list__date {
+    display: inline-block;
+    padding-bottom: 1.875rem;
+    color: #083c96; }
+  .article-list__text-content {
+    margin-bottom: 4.375rem; }
+    .article-list__text-content p {
+      color: #455a64;
+      line-height: 1.625rem; }

@@ -76,3 +76,20 @@ mixin info-footer
 
 mixin copyright(className)
     p(class='copyright ' + `${className}`) &copy;	Владимир Астахов | Создано с любовью в Loftschool | 2017
+
+mixin header(titleClass, titleText, descriptionText, ifHide)
+    header.header
+        +socials('header', 'header')
+        a.burger.header__burger(href='#')
+            span.burger__line
+            span.burger__line
+            span.burger__line
+        .header__greeting-container
+            .img-container.header__img-container
+                img.img-container__avatar(src=require('../../images/avatar.jpg'))
+            .header__info.info
+                h2(class=`${titleClass}`) #{titleText}
+                p(class='info__description') #{descriptionText}
+        a(href='#' class='header__arrow ' + `${ifHide}`)
+            svg.header__arrow-icon
+                use(xlink:href=require('../../images/icons/sprite.svg') + '#arrow_down')

@@ -6,6 +6,10 @@
     font-size: rem(28px);
     margin-bottom: 0;
   }
+  &__title {
+    @include title();
+    padding: 0;
+  }
   &__description {
     @include roboto(regular, regular);
     font-size: rem(16px);

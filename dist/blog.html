@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
-    <title>Блог страница</title><!--[if lt IE 9]>
+    <title>Мой блог</title><!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
   <link href="./css/common.css" rel="stylesheet"></head>
   <body>
@@ -30,15 +30,47 @@
         <div class="header__greeting-container">
           <div class="img-container header__img-container"><img class="img-container__avatar" src="images/avatar.jpg"></div>
           <div class="header__info info">
-            <h2 class="info__name">Владимир Астахов</h2>
-            <p class="info__description">Личный сайт веб разработчика</p>
+            <h2 class="info__title">БЛОГ</h2>
+            <p class="info__description">Статьи, которые я написал</p>
           </div>
-        </div><a class="header__arrow" href="#">
+        </div><a class="header__arrow hide" href="#">
           <svg class="header__arrow-icon">
             <use xlink:href="images/sprite.svg#arrow_down"></use>
           </svg></a>
       </header>
-      <h1>Блог страница</h1>
+      <section class="blog">
+        <div class="blog__triangle-blog">
+          <svg class="blog__triangle-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveAspectRatio="none">
+            <polygon class="blog__triangle_left" fill="#faf8f0" points="0,0 0,86 500.8,86 500.8,75.5"></polygon>
+            <polygon class="blog__triangle_right" fill="#faf8f0" points="1000,0 1000,86 500,86 500,75.5"></polygon>
+          </svg>
+        </div>
+        <div class="blog__aside">
+          <ul class="article-titles blog__article-titles">
+            <li class="article-titles__item article-titles__item_active"><a class="article-titles__link" href="#">Самое важное в SASS</a></li>
+            <li class="article-titles__item"><a class="article-titles__link" href="#">Приемы в верстке, без которых не обходится ни один сайт</a></li>
+          </ul>
+        </div>
+        <div class="blog__content">
+          <ul class="article-list blog__article-list">
+            <li class="article-list__item">
+              <h3 class="article-list__title">Самое важное в SASS</h3><span class="article-list__date">22 ноября 2016</span>
+              <div class="article-list__text-content">
+                <p>Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия.</p>
+                <p>Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</p>
+              </div>
+            </li>
+            <li class="article-list__item">
+              <h3 class="article-list__title">Приемы в верстке, без которых не обойдется ни один сайт</h3><span class="article-list__date">13 ноября 2016</span>
+              <div class="article-list__text-content">
+                <p>Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия.</p>
+                <p>Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</p>
+                <!--Todo: посмотреть неиспользуемы классы в article-titles и article-list-->
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
       <footer class="footer">
         <div class="footer__container">
           <div class="footer__col footer__col-left">

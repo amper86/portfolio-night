@@ -4,6 +4,7 @@ include ../helpers/_mixins
 block head
     title Обо мне
 block content
+    +header('info__name', 'Владимир Астахов', 'Личный сайт веб разработчика')
     section.about
         .about__triangle-blog
             svg.about__triangle-icon(xmlns="http://www.w3.org/2000/svg", viewbox='0 0 1000 85', preserveAspectRatio="none")
@@ -35,4 +36,3 @@ block content
                 .contacts__title
                     .block-subtitle Контакты
                 +info
-                //todo: закончил на стилизации скиллов
