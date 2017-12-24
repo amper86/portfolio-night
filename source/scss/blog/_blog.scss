@@ -1,0 +1,26 @@
+.blog {
+  width: 100%;
+  padding: rem(70px) 0 rem(300px) 0;
+  background-color: #faf8f0;
+  margin-top: -5%;
+  position: relative;
+  display: flex;
+  &__triangle-blog {
+    position: absolute;
+    font-size: 0;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+  }
+  &__triangle-icon {
+    height: 20vh;
+    width: 100%;
+  }
+  &__aside {
+    width: 28%;
+    margin-right: rem(80px);
+  }
+  &__content {
+    width: 72%;
+  }
+}

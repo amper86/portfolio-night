@@ -1,0 +1,27 @@
+.article-list {
+  max-width: rem(870px);
+  &__item {
+    border-bottom: 5px solid #ecebe4;
+    margin-bottom: rem(70px);
+    &:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+  }
+  &__title {
+    @include subtitle($gray);
+    padding-bottom: rem(30px);
+  }
+  &__date {
+    display: inline-block;
+    padding-bottom: rem(30px);
+    color: $dark;
+  }
+  &__text-content {
+    margin-bottom: rem(70px);
+    p {
+      color: $color-text;
+      line-height: rem(26px);
+    }
+  }
+}

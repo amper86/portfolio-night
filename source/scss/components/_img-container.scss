@@ -1,0 +1,9 @@
+.img-container {
+  border-radius: 50%;
+  overflow: hidden;
+  width: rem(140px);
+  height: rem(140px);
+  &__avatar {
+    max-width: 100%;
+  }
+}

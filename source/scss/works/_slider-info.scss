@@ -1,0 +1,42 @@
+.slider-info {
+  background-color: #f2f0e8;
+  grid-row: 1/10;
+  position: relative;
+  &__container {
+    max-width: rem(400px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+  }
+  &__title {
+    margin-bottom: rem(25px);
+  }
+  &__text {
+    margin-bottom: rem(50px);
+    & p {
+      margin-bottom: rem(10px);
+    }
+    & span {
+      color: $dark;
+    }
+  }
+  &__link {
+    display: inline-block;
+    background-color: #004cd1;
+    color: #ffffff;
+    text-decoration: none;
+    padding: rem(15px);
+    transition: .3s linear;
+    &:hover {
+      background-color: $dark;
+    }
+    &-icon {
+      margin-right: rem(10px);
+    }
+    &-text {
+      @include roboto(medium, regular);
+    }
+  }
+}

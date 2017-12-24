@@ -1,0 +1,95 @@
+mixin socials(className, classStyle)
+    //Социалки className-вводим класс родительского блока
+    //classStyle вводим имя модификатора для стилизации
+    //стили в _socials.scss
+    ul(class=`socials ` + `${className}` + `__socials`)
+        -
+            var socialMenu = [
+            ['vk', 'https://vk.com/id3022300'],
+            ['github', 'https://github.com/amper86'],
+            ['in', 'https://ru.linkedin.com']
+            ]
+        each soc in socialMenu
+            li.socials__item
+                a(href=`${soc[1]}` class=`socials__link ` + `socials__link_` + `${classStyle}` target='_blank')
+                    svg(class='socials__icon')
+                        use(xlink:href=require('../../images/icons/sprite.svg') + `#${soc[0]}`)
+
+mixin navigation(infoNav, className)
+    //infoNav принимает массив 0-путь ссылки 1-текст ссылки
+    //className принимает названия можификатора у li
+    ul.nav-list
+        each nav in infoNav
+            li(class='nav-list__item ' + 'nav-list__item_' + `${className}`)
+                a.nav-list__link(href=`${nav[0]}`) #{nav[1]}
+
+mixin test
+    -
+        var skills = {
+        frontend: ["Frontend", "HTML5", "CSS3", "JavaScript & jQuery"],
+        backend: ["Backend", "PHP", "mySQL", "Node.js & npm", "Mongo.db"],
+        workFlow: ["WorkFlow", "Git", "Gulp", "Bower"]
+        };
+    ul.skills-list
+        each item in skills
+            li.skills-list__item
+                .skills-row
+                    .skills-row__title #{item[0]}
+                    ul.skills-row__list
+                        - for (var i=1; i<item.length; i++)
+                            li.skills-row__item
+                                .skills-row__container
+                                    svg.skills-row__circle
+                                        circle.skills-row__image-bg(r="60" cx="50" cy="60" fill="none")
+                                        circle.skills-row__image-level(r="60" cx="50" cy="60" transform="rotate(-90 55 55)")
+                                    .skills-row__title-skill #{item[i]}
+
+mixin info
+    -
+        var contacts = [
+        ['skype_kdn', 'skype_n_test', 'skype:'],
+        ['astahov@gmail.com', 'envelope_n', 'mailto:'],
+        ['+7 931 200 93 24', 'phone_n', 'tel:'],
+        ['Новосибирск', 'map_n', '#']
+        ]
+    ul.contacts__list
+        each contact in contacts
+            li.contacts__item
+                .contacts-block
+                    svg(class='contacts-block__icon ' + 'contacts-block__icon_' + `${contact[1]}`)
+                        use(xlink:href=require('../../images/icons/sprite.svg') + `#${contact[1]}`)
+                    a.contacts-block__link(href=`${contact[2]}` + `${contact[0]}`) #{contact[0]}
+
+
+mixin info-footer
+    -
+        var info = [
+            ['skype:', 'skype_kdn'],
+            ['mailto:', 'astahov@gmail.com'],
+            ['tel:', '+79312009324'],
+            ['#', 'Новосибирск']
+        ]
+    ul.footer__contact-list
+        each item in info
+            li.footer__item
+                a.footer__link(href=`${item[0]}` + `${item[1]}`) #{item[1]}
+
+mixin copyright(className)
+    p(class='copyright ' + `${className}`) &copy;	Владимир Астахов | Создано с любовью в Loftschool | 2017
+
+mixin header(titleClass, titleText, descriptionText, ifHide)
+    header.header
+        +socials('header', 'header')
+        a.burger.header__burger(href='#')
+            span.burger__line
+            span.burger__line
+            span.burger__line
+        .header__greeting-container
+            .img-container.header__img-container
+                img.img-container__avatar(src=require('../../images/avatar.jpg'))
+            .header__info.info
+                h2(class=`${titleClass}`) #{titleText}
+                p(class='info__description') #{descriptionText}
+        a(href='#' class='header__arrow ' + `${ifHide}`)
+            svg.header__arrow-icon
+                use(xlink:href=require('../../images/icons/sprite.svg') + '#arrow_down')

@@ -1,0 +1,139 @@
+.form {
+  &__wrapper {
+    padding: 0 rem(20px);
+  }
+  &__row-text {
+    width: 100%;
+    margin-bottom: rem(20px);
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: #ffffff;
+  }
+  &__label-text {
+    width: rem(45px);
+    height: rem(45px);
+    color: #c4cbcd;
+    background-color: #f0efe9;
+    text-align: center;
+    line-height: rem(45px);
+    border: none;
+    cursor: pointer;
+  }
+  &__input-text {
+    width: 100%;
+    padding: 0 rem(20px);
+    height: rem(45px);
+    border: none;
+    outline: none;
+    color: #373e42;
+  }
+  &__row-checkbox {
+    margin-bottom: rem(20px);
+    text-align: center;
+  }
+  &__input-checkbox {
+    position: absolute;
+    left: -9999px;
+  }
+  &__label-checkbox {
+    position: relative;
+    &:before {
+      content: '';
+      width: rem(20px);
+      height: rem(20px);
+      border-radius: 4px;
+      display: inline-block;
+      background-color: #ffffff;
+      vertical-align: middle;
+      margin-right: rem(20px);
+      transition: .3s linear;
+    }
+    &:after {
+      content: '';
+      display: inline-block;
+      width: rem(20px);
+      height: rem(20px);
+      position: absolute;
+      top: rem(2px);
+      left: 0;
+      background: url('../images/icons/check.svg') no-repeat center;
+      opacity: 0;
+      transition: .3s linear;
+    }
+  }
+  &__input-checkbox:checked + &__label-checkbox:before {
+    background-color: $light;
+  }
+  &__input-checkbox:checked + &__label-checkbox:after {
+    opacity: 1;
+  }
+  &__row-question {
+    text-align: center;
+    margin-bottom: rem(10px);
+  }
+  &__question {
+    @include roboto(bold, regular);
+  }
+  &__row-radio {
+    display: flex;
+    justify-content: center;
+    margin-bottom: rem(40px);
+  }
+  &__block-radio {
+    margin-right: rem(35px);
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__input-radio {
+    position: absolute;
+    left: -9999px;
+  }
+  &__label-radio {
+    position: relative;
+    &:before {
+      content: '';
+      display: inline-block;
+      width: rem(20px);
+      height: rem(20px);
+      margin-right: rem(10px);
+      border-radius: 50%;
+      background-color: #ffffff;
+      vertical-align: middle;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      top: rem(8px);
+      left: rem(6px);
+      width: rem(8px);
+      height: rem(8px);
+      border-radius: 50%;
+      transition: .3s linear;
+    }
+  }
+  &__input-radio:checked + &__label-radio:after {
+    background-color: $light;
+  }
+  &__nav {
+    display: flex;
+  }
+  &__nav-btn {
+    width: 50%;
+    padding: rem(15px) 0;
+    border: 0;
+    border-right: 2px solid rgba(255,255,255, .5);
+    outline: none;
+    cursor: pointer;
+    @include roboto(medium, regular);
+    background-color: $light;
+    color: #ffffff;
+    transition: .3s linear;
+    &:last-child {
+      border-right: none;
+    }
+    &:hover {
+      background-color: $dark;
+    }
+  }
+}

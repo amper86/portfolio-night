@@ -1,0 +1,56 @@
+.form-feedback {
+  width: rem(380px);
+  background-color: rgba(255,255,255, .05);
+  &__wrapper {
+    padding: 0 rem(20px);
+  }
+  &__title {
+    text-align: center;
+    padding-top: rem(45px);
+    margin-bottom: rem(30px);
+    &-text {
+      color: #ffffff;
+    }
+  }
+  &__row-text {
+    margin-bottom: rem(20px);
+  }
+  &__input-text {
+    width: 100%;
+    outline: none;
+    background-color: rgba(255,255,255, .07);
+    border: none;
+    padding: rem(18px);
+    color: #ffffff;
+    &_textarea {
+      height: rem(130px);
+      resize: none;
+    }
+  }
+  &__row-btn {
+    display: flex;
+  }
+  &__btn {
+    width: 50%;
+    border: none;
+    outline: none;
+    padding: rem(18px) 0;
+    &_submit {
+      background-color: $light;
+      @include roboto(medium, regular);
+      color: #ffffff;
+      transition: .3s linear;
+      &:hover {
+        background-color: $dark;
+      }
+    }
+    &_reset {
+      @include roboto(regular, regular);
+      background-color: transparent;
+      color: rgba(255,255,255, .5);
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

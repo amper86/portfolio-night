@@ -1,14 +1,51 @@
 extends ../base
+include ../helpers/_mixins
 
 block head
-    title Страница приветствия
+    title Владимир Астахов
 
 block content
     .wrapper-welcome
-        button.btn-autorization.wrapper-welcome__btn Авторизоваться
-        .greeting-container.wraperr-welcome__greeting-container
+        button.btn-autorization.wrapper-welcome__btn(type='button') Авторизоваться
+        .greeting-container.wrapper-welcome__greeting-container
             .greeting-container__face
-                .img-container.greeting-container__img
-                img.img-container__avatar
-
+                .greeting-container__main
+                    .img-container.greeting-container__img
+                        img.img-container__avatar(src=require('../../images/avatar.jpg'))
+                    .info.greeting-container__info
+                        h1.info__name Владимир Астахов
+                        p.info__description Личный сайт веб разработчика
+                    +socials('greeting-container', 'welcome')
+                nav.greeting-container__nav
+                    +navigation([['./works.html', 'Мои работы'], ['./about.html', 'Обо мне'], ['./blog.html', 'Блог']], 'welcome')
             .greeting-container__back
+                h2.greeting-container__autorization-title АТОРИЗУЙТЕСЬ
+                .form
+                    form.form__elem(method='post' id='form-auth')
+                        .form__wrapper
+                            .form__row-text
+                                label.form__label-text(for='login')
+                                    i(class='fa fa-user' aria-hidden='true')
+                                input.form__input-text(type='text' id='login' name='login' placeholder='Логин')
+                            .form__row-text
+                                label.form__label-text(for='password')
+                                    i(class='fa fa-key' aria-hidden='true')
+                                input.form__input-text(type='password' id='password' name='password' placeholder='Пароль')
+                            .form__row-checkbox
+                                input.form__input-checkbox(type='checkbox' value='1' id='human' name='human' checked)
+                                label.form__label-checkbox(for='human') Я человек
+                            .form__row-question
+                                span.form__question Вы точно не робот?
+                            .form__row-radio
+                                .form__block-radio
+                                    input.form__input-radio#testyes(type='radio' name='test' value='человек' checked)
+                                    label.form__label-radio(for='testyes') Да
+                                .form__block-radio
+                                    input.form__input-radio#testno(type='radio' name='test' value='робот')
+                                    label.form__label-radio(for='testno') Не уверен
+                        .form__nav
+                            button.form__nav-btn(type='button') На главную
+                            button.form__nav-btn(type='submit') Авторизоваться
+        footer.wrapper-welcome__footer
+            +copyright
+            //ToDo: Сделать flip в greeting-container.scss

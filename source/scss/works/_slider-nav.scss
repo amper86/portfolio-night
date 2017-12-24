@@ -1,0 +1,68 @@
+.slider-nav {
+  background-color: #e3e2de;
+  grid-row: 7/10;
+  display: flex;
+  &__container {
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  &__btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(170,171,183, .7);
+    z-index: 5;
+  }
+  &__down-icon {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: rem(45px);
+    height: rem(30px);
+    fill: #ffffff;
+  }
+  &__up-icon {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: rem(45px);
+    height: rem(30px);
+    fill: #ffffff;
+  }
+  &__list {
+    width: 100%;
+    height: 400%;
+    position: absolute;
+    left: 0;
+    &_left {
+      top: 0;
+    }
+    &_right {
+      top: -200%;
+    }
+  }
+  &__item {
+    background: no-repeat center/auto 90%;
+    width: 100%;
+    height: 25%;
+    &_1 {
+      background-image: url('../images/work-1.png');
+    }
+    &_2 {
+      background-image: url('../images/work-2.png');
+    }
+    &_3 {
+      background-image: url('../images/work-3.png');
+    }
+    &_4 {
+      background-image: url('../images/work-4.png');
+    }
+  }
+}

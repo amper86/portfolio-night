@@ -1,0 +1,17 @@
+.contacts-block {
+  &__icon {
+    display: inline-block;
+    fill: #024dd1;
+    width: rem(45px);
+    height: rem(45px);
+    vertical-align: middle;
+    margin-right: rem(10px);
+  }
+  &__link {
+    display: inline-block;
+    text-decoration: none;
+    @include roboto(medium, regular);
+    color: $gray;
+  }
+
+}

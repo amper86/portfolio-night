@@ -1,5 +1,5 @@
 import './index.pug';
 import 'normalize.css';
-import './index.scss';
+import '../../scss/main.scss';
 
 console.log('index');

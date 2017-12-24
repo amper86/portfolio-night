@@ -1,0 +1,16 @@
+.btn-autorization {
+  padding: rem(10px) rem(20px);
+  background-color: transparent;
+  color: #ffffff;
+  @include roboto(medium, regular);
+  font-size: rem(16px);
+  border: 1px solid #ffffff;
+  box-shadow: none;
+  outline: none;
+  transition: .3s linear;
+  &:hover {
+    cursor: pointer;
+    background-color: $dark;
+    border-color: $dark;
+  }
+}

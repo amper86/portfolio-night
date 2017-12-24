@@ -1,0 +1,31 @@
+.greeting-container {
+  width: rem(380px);
+  background-color: $transp-bg;
+  color: #ffffff;
+  &__face {
+
+  }
+  &__main {
+    padding: rem(40px) rem(20px) 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__img {
+    margin-bottom: rem(15px);
+  }
+  &__info {
+    margin-bottom: rem(30px);
+  }
+  &__socials {
+    margin-bottom: rem(30px);
+  }
+  &__back {
+    display: none;
+  }
+  &__autorization-title {
+    padding: rem(40px) rem(20px) 0;
+    text-align: center;
+    @include subtitle()
+  }
+}

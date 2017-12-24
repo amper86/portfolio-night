@@ -1,6 +1,38 @@
-extends ../base
+extends ../template
+include ../helpers/_mixins
 
 block head
-    title Обо мне страница
+    title Обо мне
 block content
-    h1 Обо мне страница
+    +header('info__name', 'Владимир Астахов', 'Личный сайт веб разработчика')
+    section.about
+        .about__triangle-blog
+            svg.about__triangle-icon(xmlns="http://www.w3.org/2000/svg", viewbox='0 0 1000 85', preserveAspectRatio="none")
+                polygon.about__triangle_left(fill="#f2f0e8" points="0,0 0,86 500.8,86 500.8,75.5" )
+                polygon.about__triangle_right( fill="#eae8e2" points="1000,0 1000,86 500,86 500,75.5" )
+        .about__left
+            .about__left-title
+                h1.block-title.about__block-title Обо мне
+            .about__left-content
+                .user-description
+                    .user-description__img-container
+                        img.user-description__img(src=require('../../images/about-photo.jpg'))
+                    .user-description__title
+                        h2.block-subtitle Кто я
+                    .user-description__text.text-content
+                        p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                        p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
+        .about__right
+            .about__right-title
+                h2.block-subtitle Чем я могу быть вам полезен
+            .about__right-text.text-content
+                p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+            .about__right-content
+                +test
+    section.map
+        .map__google
+        .map__contacts
+            .contacts
+                .contacts__title
+                    .block-subtitle Контакты
+                +info

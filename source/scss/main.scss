@@ -1,0 +1,43 @@
+@import "helpers/fonts";
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/base";
+@import "helpers/font-awesome.min";
+
+@import "components/socials";
+@import "components/block";
+@import "components/copyright";
+@import "components/greeting-container";
+@import "components/img-container";
+@import "components/info";
+@import "components/nav-list";
+@import "components/header";
+@import "components/burger";
+@import "components/triangle";
+@import "components/text-content";
+@import "components/skills-list";
+@import "components/skills-row";
+@import "components/footer";
+
+@import "index/wrapper-welcome";
+@import "index/btn-autorization";
+@import "index/form";
+
+@import "about/about";
+@import "about/user-description";
+@import "about/map";
+@import "about/contacts";
+@import "about/contacts-block";
+
+@import "blog/blog";
+@import "blog/article-titles";
+@import "blog/article-list";
+
+@import "works/works";
+@import "works/slider";
+@import "works/slider-info";
+@import "works/slider-img";
+@import "works/slider-nav";
+@import "works/about-me";
+@import "works/comments-list";
+@import "works/form-feedback";
