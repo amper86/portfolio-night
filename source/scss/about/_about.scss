@@ -5,8 +5,9 @@
   background-color: tomato;
   display: flex;
   &__triangle-blog {
+    font-size: 0;
     position: absolute;
-    bottom: 99%;
+    bottom: 100%;
     left: 0;
     right: 0;
   }

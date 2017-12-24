@@ -41,47 +41,70 @@
       <section class="works">
         <div class="works__triangle">
           <svg class="works__triangle-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveAspectRatio="none">
-            <polygon class="works__triangle_left" fill="#f2f0e8" points="0,0 0,86 500.8,86 500.8,75.5"></polygon>
-            <polygon class="works__triangle_right" fill="#eae8e2" points="1000,0 1000,86 500,86 500,75.5"></polygon>
+            <polygon class="works__triangle_left" fill="#0d1120" fill-opacity=".85" points="0,0 0,86 500.8,86 500.8,75.5"></polygon>
+            <polygon class="works__triangle_right" fill="#0d1120" fill-opacity=".85" points="1000,0 1000,86 500,86 500,75.5"></polygon>
           </svg>
           <div class="works__title">
-            <h2 class="block-title block-title_starts">Мои работы</h2>
+            <h2 class="works__title-text">МОИ РАБОТЫ</h2>
           </div>
         </div>
         <div class="slider">
           <div class="slider-info">
-            <div class="slider-info__title">
-              <h2 class="block-subtitle"></h2>
+            <div class="slider-info__container">
+              <div class="slider-info__title">
+                <h2 class="block-subtitle">САЙТ ШКОЛЫ ОНЛАЙН ОБРАЗОВАНИЯ</h2>
+              </div>
+              <div class="slider-info__text">
+                <p><span>HTML, CSS, JAVASCRIPT</span></p>
+              </div><a class="slider-info__link" href="#"><i class="fa fa-link slider-info__link-icon" aria-hidden="true"></i><span class="slider-info__link-text">Посмотреть сайт</span>
+                <!--todo: нужно будет сделать список, когда буду делать слайдер--></a>
             </div>
-            <div class="slider-info__text"><span>HTML, CSS, JAVASCRIPT</span></div><a class="slider-info__link" href="#"><i class="fa fa-link" aria-hidden="true"></i><span class="slider-info__link-text">Посмотреть сайт</span></a>
           </div>
           <div class="slider-img">
             <div class="slider-img__container"></div>
           </div>
           <div class="slider-nav">
-            <ul class="slider-nav__list slider-nav__list_left">
-              <li class="slider-nav__item item_1"></li>
-              <li class="slider-nav__item item_2"></li>
-              <li class="slider-nav__item item_3"></li>
-            </ul>
-            <ul class="slider-nav__list slider-nav__list_right">
-              <li class="slider-nav__item item_1"></li>
-              <li class="slider-nav__item item_2"></li>
-              <li class="slider-nav__item item_3"></li>
-            </ul>
+            <div class="slider-nav__container"><a class="slider-nav__btn" href="#">
+                <svg class="slider-nav__down-icon">
+                  <use xlink:href="images/sprite.svg#portf_arrow_down"></use>
+                </svg></a>
+              <ul class="slider-nav__list slider-nav__list_left">
+                <li class="slider-nav__item slider-nav__item_1"></li>
+                <li class="slider-nav__item slider-nav__item_2"></li>
+                <li class="slider-nav__item slider-nav__item_3"></li>
+                <li class="slider-nav__item slider-nav__item_4"></li>
+              </ul>
+            </div>
+            <div class="slider-nav__container"><a class="slider-nav__btn" href="#">
+                <svg class="slider-nav__up-icon">
+                  <use xlink:href="images/sprite.svg#portf_arrow_up"></use>
+                </svg></a>
+              <ul class="slider-nav__list slider-nav__list_right">
+                <li class="slider-nav__item slider-nav__item_1"></li>
+                <li class="slider-nav__item slider-nav__item_2"></li>
+                <li class="slider-nav__item slider-nav__item_3"></li>
+                <li class="slider-nav__item slider-nav__item_4"></li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
       <section class="about-me">
         <div class="about-me__title">
-          <div class="block-title block-title_stars"></div>
+          <h2 class="about-me__title-text">ЧТО ОБО МНЕ ГОВОРЯТ</h2>
         </div>
         <div class="about-me__comments">
           <ul class="comments-list">
             <li class="comments-list__item">
-              <div class="comments-list__container-img"><img class="comments-list__img"></div>
+              <div class="comments-list__container-img"><img class="comments-list__img" src="images/koval.jpg"></div>
               <div class="comments-list__text">
-                <p></p><span class="comments-list__text-name"></span><span class="comments-list__text-position"></span>
+                <p>Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!</p><span class="comments-list__text-name">Ковальчук Дмитрий</span><span class="comments-list__text-position">— основатель Loftschool</span>
+              </div>
+            </li>
+            <li class="comments-list__item">
+              <div class="comments-list__container-img"><img class="comments-list__img" src="images/sabancev.jpg"></div>
+              <div class="comments-list__text">
+                <p>Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!</p><span class="comments-list__text-name">Сабанцев Владимир</span><span class="comments-list__text-position">— преподаватель</span>
               </div>
             </li>
           </ul>
@@ -89,29 +112,29 @@
         <div class="about-me__form">
           <div class="form-feedback">
             <form class="form-feedback__elem" method="post" id="form-feedback">
-              <div class="form-feedback__wpapper">
+              <div class="form-feedback__wrapper">
                 <div class="form-feedback__title">
-                  <h2 class="block-title"></h2>
+                  <h2 class="block-subtitle form-feedback__title-text">СВЯЗАТЬСЯ СО МНОЙ</h2>
                 </div>
                 <div class="form-feedback__row-text">
-                  <input class="form-feedback__text" type="text" id="name" name="name" placeholder="Ваше имя">
+                  <input class="form-feedback__input-text" type="text" id="name" name="name" placeholder="Ваше имя">
                 </div>
                 <div class="form-feedback__row-text">
-                  <input class="form-feedback__text" type="text" id="email" name="email" placeholder="Ваше email">
+                  <input class="form-feedback__input-text" type="text" id="email" name="email" placeholder="Ваш email">
                 </div>
                 <div class="form-feedback__row-text">
-                  <input class="form-feedback__text" type="textarea" id="message" name="message" placeholder="Ваше сообщение">
+                  <textarea class="form-feedback__input-text form-feedback__input-text_textarea" type="textarea" id="message" name="message" placeholder="Ваше сообщение"></textarea>
                 </div>
               </div>
               <div class="form-feedback__row-btn">
-                <button class="form-feedback_btn" type="submit">Отправить</button>
-                <button class="form-feedback_btn" type="reset">Очистить</button>
+                <button class="form-feedback__btn form-feedback__btn_submit" type="submit">Отправить</button>
+                <button class="form-feedback__btn form-feedback__btn_reset" type="reset">Очистить</button>
               </div>
             </form>
           </div>
         </div>
-        <div class="about-me__arrow-up"><a class="arrow-up" href="#">
-            <svg class="arrow-up__icon">
+        <div class="about-me__arrow-up"><a class="about-me__arrow-link" href="#">
+            <svg class="about-me__up-icon">
               <use xlink:href="images/sprite.svg#portf_arrow_up"></use>
             </svg></a></div>
       </section>

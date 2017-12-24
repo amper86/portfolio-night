@@ -40,6 +40,10 @@
       width: rem(26px);
       height: rem(16px);
       fill: #c3c2c8;
+      transition: .3s linear;
+      &:hover {
+        fill: #ffffff;
+      }
     }
   }
 }
