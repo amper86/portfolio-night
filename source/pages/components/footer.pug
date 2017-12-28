@@ -1,12 +1,11 @@
 footer.footer
     .footer__container
-        .footer__col.footer__col-left
-            p Этот сайт я сделал в рамках обучения в Школе
-            p онлайн образования LoftSchool.
-        .footer__col.footer__col-center
+        .footer__col.footer__col_left
+            p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
+        .footer__col.footer__col_center
             nav.footer__nav
                 +navigation([['./works.html', 'Мои работы'], ['./about.html', 'Обо мне'], ['./blog.html', 'Блог'], ['./index.html', 'Авторизоваться']], 'footer')
             +socials('footer', 'footer')
-        .footer__col.footer__col-right
+        .footer__col.footer__col_right
             +info-footer
     +copyright('footer__copyright')

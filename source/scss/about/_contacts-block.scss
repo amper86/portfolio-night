@@ -1,4 +1,7 @@
 .contacts-block {
+  @include tablets {
+    //width: rem(350px);
+  }
   &__icon {
     display: inline-block;
     fill: #024dd1;

@@ -1,5 +1,10 @@
 .skills-row {
   margin-bottom: rem(20px);
+  @include tablets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   &__title {
     @include roboto(medium, regular);
     font-size: rem(28px);
@@ -9,19 +14,29 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
+    @include tablets {
+      justify-content: space-around;
+    }
   }
   &__item{
-    margin-right: rem(40px);
+    margin-right: rem(35px);
     &:last-child {
       margin-right: 0;
+      @include tablets {
+        //margin-right: rem(35px);
+      }
+    }
+    @include tablets {
+      margin-right: 0;
+      padding: 10px 15px;
     }
   }
   &__container {
     position: relative;
   }
   &__circle {
-    width: rem(120px);
-    height: rem(120px);
+    width: rem(110px);
+    height: rem(110px);
   }
   &__title-skill {
     position: absolute;

@@ -1,9 +1,11 @@
 .about {
   width: 100%;
   position: relative;
-  margin-top: -5%;
-  background-color: tomato;
+  background-color: #ffffff;
   display: flex;
+  @include tablets {
+    flex-direction: column;
+  }
   &__triangle-blog {
     font-size: 0;
     position: absolute;
@@ -14,31 +16,74 @@
   &__triangle-icon {
     height: 20vh;
     width: 100%;
+    & polygon {
+      @include tablets {
+        fill: #f2f0e8;
+      }
+    }
   }
   &__left {
     background-color: #f2f0e8;
     width: 50%;
     display: flex;
     z-index: 5;
+    @include small-monitor {
+      flex-direction: column;
+    }
+    @include tablets {
+      width: 100%;
+    }
   }
   &__left-title {
     width: 40%;
     text-align: center;
     margin-top: rem(-100px);
+    @include small-monitor {
+      width: 100%;
+    }
+    @include tablets {
+      margin-top: 0;
+    }
   }
   &__block-title {
     background: url('../images/icons/stars2-test.svg') no-repeat center;
+    @include tablets {
+      padding: rem(25px) 0;
+    }
   }
   &__left-content {
     width: 60%;
+    @include small-monitor {
+      width: 100%;;
+    }
   }
   &__right {
     background-color: #eae8e2;
     width: 50%;
-    padding: 0 rem(38px);
+    padding-left: rem(38px);
+    @include tablets {
+      width: 100%;
+    }
+    @include  tablets {
+      padding-left: 0;
+    }
   }
   &__right-title {
     text-align: center;
     margin-bottom: rem(30px);
+    @include tablets {
+      width: 62%;
+      margin: rem(50px) auto rem(30px) auto;
+    }
+  }
+  &__right-text {
+    @include tablets {
+      width: 62%;
+      margin: 0 auto;
+    }
+    @include phones {
+      width: 100%;
+      margin: 0;
+    }
   }
 }

@@ -10,20 +10,86 @@
     background-color: rgba(28,31,41, .85);
     display: flex;
     padding: rem(30px) 0;
+    @include tablets {
+      flex-wrap: wrap;
+      padding: rem(30px);
+    }
+    @include phones {
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
   }
   &__col {
-    width: 33.33%;
     padding: 0 rem(30px);
     border-right: 1px solid rgba(255,255,255, .2);
+    @include tablets {
+      border-right: none;
+      padding: 0;
+    }
     &:last-child {
       border-right: none;
     }
-  }
-  &__col-left p {
-    margin-bottom: rem(10px);
+    &_left {
+      width: 33.33%;
+      @include small-monitor {
+        width: 34.84%;
+      }
+      @include tablets {
+        width: 100%;
+        border-bottom: 1px solid rgba(255,255,255, .2);
+        text-align: center;
+        margin-bottom: rem(20px);
+      }
+      @include phones {
+        text-align: center;
+      }
+      & p {
+        margin-bottom: rem(10px);
+        @include tablets {
+          display: inline-block;
+          margin-bottom: rem(20px);
+          vertical-align: middle;
+        }
+      }
+    }
+    &_center {
+      width: 33.33%;
+      @include small-monitor {
+        width: 39%;
+      }
+      @include tablets {
+        width: 70%;
+      }
+      @include phones {
+        width: 100%;
+        border-bottom: 1px solid rgba(255,255,255, .2);
+        margin-bottom: rem(20px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: rem(20px);
+      }
+    }
+    &_right {
+      width: 33.33%;
+      @include small-monitor {
+        width: 26.16%;
+      }
+      @include tablets {
+        width: 30%;
+        text-align: right;
+      }
+      @include phones {
+        width: 100%;
+        text-align: center;
+      }
+    }
   }
   &__nav {
     margin-bottom: rem(30px);
+    @include tablets {
+      width: 100%;
+    }
   }
   &__item {
     margin-bottom: rem(10px);

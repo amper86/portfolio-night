@@ -1,5 +1,9 @@
 .nav-list {
   display: flex;
+  justify-content: space-between;
+  @include phones {
+    justify-content: space-around;
+  }
   &__item {
     &_welcome {
       width: 33.33%;
@@ -14,9 +18,6 @@
           background-color: rgba($dark, .85);
         }
       }
-    }
-    &_footer {
-      margin-right: rem(40px);
     }
   }
   &__link {
