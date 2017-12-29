@@ -24,6 +24,10 @@
     align-items: center;
     padding-top: rem(35px);
     background: url('../images/icons/stars1.svg') no-repeat center/cover;
+    @include phones {
+      background-size: contain;
+      width: 100%;
+    }
   }
   &__img-container {
     margin-bottom: rem(15px);

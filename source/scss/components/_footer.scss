@@ -5,7 +5,6 @@
   right: 0;
   color: #ffffff;
   @include roboto(light, regular);
-  font-size: rem(16px);
   &__container {
     background-color: rgba(28,31,41, .85);
     display: flex;
@@ -17,6 +16,7 @@
     @include phones {
       flex-direction: column;
       flex-wrap: nowrap;
+      padding: rem(20px) rem(10px);
     }
   }
   &__col {
@@ -89,6 +89,9 @@
     margin-bottom: rem(30px);
     @include tablets {
       width: 100%;
+    }
+    @include phones {
+      margin-bottom: rem(15px);
     }
   }
   &__item {

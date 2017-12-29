@@ -1,6 +1,12 @@
 .slider-img {
   background-color: #e3e2de;
-  grid-row: 1/7;
+  width: 50%;
+  height: 70%;
+  @include tablets {
+    width: 100%;
+    height: 50%;
+    order: -5;
+  }
   &__container {
     width: 100%;
     height: 100%;

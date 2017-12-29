@@ -1,7 +1,6 @@
 html,
 body{
   width: 100%;
-  font-size: 16px;
 }
 body{
   line-height: 1.42;
@@ -45,6 +44,9 @@ body {
   @include roboto(regular, regular);
   color: $color-text;
   font-size: rem(16px);
+  @include tablets {
+    font-size: rem(14px);
+  }
 }
 .wrapper {
   position: relative;

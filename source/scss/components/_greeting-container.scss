@@ -16,9 +16,15 @@
   }
   &__info {
     margin-bottom: rem(30px);
+    @include phones {
+      margin-bottom: rem(20px);
+    }
   }
   &__socials {
     margin-bottom: rem(30px);
+    @include phones {
+      margin-bottom: rem(20px);
+    }
   }
   &__back {
     display: none;
@@ -26,6 +32,9 @@
   &__autorization-title {
     padding: rem(40px) rem(20px) 0;
     text-align: center;
-    @include subtitle()
+    @include subtitle();
+    @include tablets {
+      font-size: rem(30px);
+    }
   }
 }

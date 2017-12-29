@@ -2,9 +2,11 @@
   width: 100%;
   padding: rem(70px) 0 rem(300px) 0;
   background-color: #faf8f0;
-  margin-top: -5%;
   position: relative;
   display: flex;
+  @include phones {
+    padding-bottom: rem(430px);
+  }
   &__triangle-blog {
     position: absolute;
     font-size: 0;
@@ -19,8 +21,22 @@
   &__aside {
     width: 28%;
     margin-right: rem(80px);
+    //todo: отстилизовать левое меню в блоге и сделать вправо выдвижение
+    @include tablets {
+      margin-right: 0;
+      position: fixed;
+      left: -90%;
+      top: 0;
+      bottom: 0;
+      width: 90%;
+    }
   }
   &__content {
     width: 72%;
+    padding-right: rem(25px);
+    @include tablets {
+      width: 100%;
+      padding: 0 rem(25px);
+    }
   }
 }

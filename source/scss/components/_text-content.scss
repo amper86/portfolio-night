@@ -1,6 +1,5 @@
 .text-content {
   @include roboto(regular, regular);
-  font-size: rem(16px);
   color: $gray;
   @include phones {
     padding: 0 rem(10px);

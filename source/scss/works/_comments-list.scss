@@ -1,6 +1,9 @@
 .comments-list {
   display: flex;
   margin-bottom: rem(70px);
+  @include phones {
+    flex-direction: column;
+  }
   &__item {
     max-width: rem(400px);
     padding: rem(10px);
@@ -28,6 +31,9 @@
       display: block;
       text-align: center;
       @include roboto(bold, italic);
+      @include phones {
+        margin-top: rem(10px);
+      }
     }
     &-position {
       display: block;
