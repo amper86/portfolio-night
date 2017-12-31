@@ -148,6 +148,13 @@ module.exports = {
                 options: {
                     name: 'fonts/[name].[ext]'
                 }
+            },
+            {
+                test: /\.(mp4)$/,
+                loader: 'file-loader',
+                options: {
+                    name: 'media/[name].[ext]'
+                }
             }
         ]
     }

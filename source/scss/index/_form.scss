@@ -78,6 +78,9 @@
     display: flex;
     justify-content: center;
     margin-bottom: rem(40px);
+    @include phones {
+      margin-bottom: rem(20px);
+    }
   }
   &__block-radio {
     margin-right: rem(35px);

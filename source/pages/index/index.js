@@ -2,4 +2,6 @@ import './index.pug';
 import 'normalize.css';
 import '../../scss/main.scss';
 
-console.log('index');
+
+import '../../js/flip';
+import '../../js/parallax';
