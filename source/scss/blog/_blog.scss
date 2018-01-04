@@ -4,6 +4,7 @@
   background-color: #faf8f0;
   position: relative;
   display: flex;
+  justify-content: flex-end;
   @include phones {
     padding-bottom: rem(430px);
   }
@@ -19,16 +20,49 @@
     width: 100%;
   }
   &__aside {
+    position: absolute;
+    top: 70px;
+    left: 0;
     width: 28%;
-    margin-right: rem(80px);
-    //todo: отстилизовать левое меню в блоге и сделать вправо выдвижение
+    padding-right: rem(80px);
+    transition: left .3s ease;
+    @include small-monitor {
+      padding-right: 0;
+    }
     @include tablets {
-      margin-right: 0;
       position: fixed;
       left: -90%;
       top: 0;
       bottom: 0;
       width: 90%;
+      background-color: #253468;
+    }
+    &_fixed {
+      position: fixed;
+      top: 70px;
+      left: 0;
+      @include tablets {
+        top: 0;
+        left: -90%;
+        bottom: 0;
+      }
+    }
+    &_mobile {
+      left: 0;
+    }
+    &:after {
+      @include tablets {
+        content: '';
+        display: inline-block;
+        width: rem(40px);
+        height: rem(40px);
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        right: -10px;
+        transform: translateY(-50%);
+        background-color: #253468;
+      }
     }
   }
   &__content {
