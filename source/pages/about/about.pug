@@ -35,5 +35,6 @@ block content
                 .contacts__title
                     .block-subtitle Контакты
                 +info
-        .map__google
-                //todo:выставить font-size под брэйкпойнты
+        .map__google#map
+block script
+    script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBVE2BPmabi29Aw4w3gZmc4pZ8FPw5p5Fs&callback=initMap' async defer)

@@ -37,6 +37,16 @@
   &__circle {
     width: rem(110px);
     height: rem(110px);
+    fill: transparent;
+    stroke-width: 20;
+  }
+  &__icon-bg {
+    stroke: #dfdcd5;
+  }
+  &__icon-level {
+    stroke: #004cd1;
+    stroke-dasharray: .001 282.6;
+    transition: .5s ease;
   }
   &__title-skill {
     position: absolute;
