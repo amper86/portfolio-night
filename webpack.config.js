@@ -121,6 +121,7 @@ module.exports = {
             },
             {
                 test    : /\.js$/        ,
+                exclude: /(node_modules|map.js)/,
                 loader  : 'babel-loader' ,
                 options : {
             	    presets : ['env', 'es2015', 'stage-1']

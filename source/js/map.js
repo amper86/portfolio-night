@@ -1,19 +1,19 @@
 export default function initMap() {
-  const kuzminki = {lat: 55.706070, lng: 37.756561};
-  const map = new google.maps.Map(document.getElementById('map'), {
+  var kuzminki = {lat: 55.706070, lng: 37.756561};
+  var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 15,
     center: kuzminki,
     mapTypeControl: false,
     disableDefaultUI: true,
   });
-  const image = require('../images/icons/map_marker.svg');
-  let marker = new google.maps.Marker({position: kuzminki, map: map, icon: image});
+  var image = require('../images/icons/map_marker.svg');
+  var marker = new google.maps.Marker({position: kuzminki, map: map, icon: image});
 
   map.setOptions({styles: styles.night});
 
 }
 
-let styles = {
+var styles = {
   default: null,
   night: [
     {

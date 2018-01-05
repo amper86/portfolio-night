@@ -3880,7 +3880,7 @@ body {
 
 .about-me {
   width: 100%;
-  background: url(../images/works-bg.jpg) no-repeat center/cover;
+  background: url(../images/works-bg.jpg) no-repeat center/100% 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -3908,10 +3908,19 @@ body {
       .about-me__title-text {
         font-size: 2.5rem; } }
   .about-me__form {
-    margin-bottom: 4.375rem; }
+    margin-bottom: 4.375rem;
+    overflow: hidden;
+    position: relative; }
     @media screen and (max-width: 480px) {
       .about-me__form {
         width: 90%; } }
+  .about-me__form-blure {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/works-bg.jpg);
+    background-repeat: no-repeat;
+    filter: blur(20px); }
   .about-me__arrow-up {
     margin-bottom: 4.375rem; }
   .about-me__up-icon {
@@ -3967,7 +3976,8 @@ body {
 
 .form-feedback {
   width: 23.75rem;
-  background-color: rgba(255, 255, 255, 0.05); }
+  position: relative;
+  z-index: 5; }
   @media screen and (max-width: 480px) {
     .form-feedback {
       width: 100%; } }
