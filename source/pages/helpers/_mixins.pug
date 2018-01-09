@@ -79,6 +79,8 @@ mixin copyright(className)
 
 mixin header(titleClass, titleText, descriptionText, ifHide)
     header.header
+        .header__bg
+            img.header__bg-img(src=require('../../images/bg/mount1-min.png'))
         +socials('header', 'header')
         a.burger.header__burger(href='#')
             span.burger__line
