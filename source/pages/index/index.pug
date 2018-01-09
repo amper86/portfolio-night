@@ -5,6 +5,11 @@ block head
     title Владимир Астахов
 
 block content
+    .preloader
+        svg.preloader__svg(width="52.586px" height="63.73px" viewBox="0 0 56 76")
+            circle(class='preloader__svg-one' fill='none' stroke='#ffffff' stroke-width="2.5864" stroke-miterlimit="10" cx="26.293" cy="37.438" r="25")
+            circle(class='preloader__svg-two' fill='#ffffff' cx="26.293" cy="4.5" r="4.5")
+        span.preloader__text
     .wrapper-welcome
         video.wrapper-welcome__video(autoplay loop muted)
             source.wrapper-welcome__video-source(src=require('../../media/night.mp4') type='video/mp4')
@@ -54,4 +59,3 @@ block content
                                 button.form__nav-btn(type='submit') Авторизоваться
         footer.wrapper-welcome__footer
             +copyright
-            //ToDo: Сделать flip в greeting-container.scss
