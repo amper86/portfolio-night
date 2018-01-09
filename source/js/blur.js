@@ -7,17 +7,17 @@ module.exports = $(function () {
 
     const style = blur.style;
 
-    const test = background.offsetTop;
+    const bgMargin = background.offsetTop;
 
     const backgroundWidth = background.offsetWidth;
     const backgroundHeight = background.offsetHeight;
     const positionContainerL = container.offsetLeft;
-    const positionContainerT = container.offsetTop;
+    const positionContainerFullT = container.offsetTop;
 
-    const test2 = positionContainerT - test;
+    const positionContainerT = positionContainerFullT - bgMargin;
 
     style.backgroundSize = `${backgroundWidth}px ${backgroundHeight}px`;
-    style.backgroundPosition = `-${positionContainerL}px -${test2}px`;
+    style.backgroundPosition = `-${positionContainerL}px -${positionContainerT}px`;
 
     /*console.log('@@',backgroundWidth,backgroundHeight,positionContainerL,positionContainerT);*/
   }
