@@ -16,7 +16,7 @@ module.exports = $(function () {
       console.log($header.height() + ' header');*/
 
       let windowScroll = - ($window.scrollTop() / $header.height() * 100) / 10;
-      console.log(windowScroll);
+      /*console.log(windowScroll);*/
       $headerBg.css('transform', 'translate3d(0, ' + windowScroll + '%, 0)');
     }
   });
