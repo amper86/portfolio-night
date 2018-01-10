@@ -5,6 +5,9 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
+  @include phones {
+    display: none;
+  }
   &__layer {
     width: 100%;
     height: 100%;
@@ -18,6 +21,11 @@
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 100%;
+    width: 110%;
+    @include small-monitor {
+      height: 50%;
+      width: auto;
+    }
+
   }
 }
