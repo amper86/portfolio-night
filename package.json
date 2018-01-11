@@ -41,7 +41,9 @@
     "webpack-dev-server": "^2.9.7"
   },
   "dependencies": {
+    "google-maps": "^3.2.1",
     "jquery": "^3.2.1",
+    "load-google-maps-api": "^1.0.1",
     "normalize.css": "^7.0.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
