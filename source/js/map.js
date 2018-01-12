@@ -3,7 +3,7 @@ import GoogleMapsLoader from 'google-maps';
 
 GoogleMapsLoader.KEY = 'AIzaSyBVE2BPmabi29Aw4w3gZmc4pZ8FPw5p5Fs';
 
-const image = './../images/icons/map_marker.svg';
+var image = require('../images/icons/map_marker.svg');
 
 GoogleMapsLoader.load(function(google) {
     new google.maps.Map(document.getElementById('map'), {

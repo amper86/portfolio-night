@@ -16,35 +16,43 @@ block content
             .slider-info
                 .slider-info__container
                     .slider-info__title
-                        h2.block-subtitle.block-subtitle_slider САЙТ ШКОЛЫ ОНЛАЙН ОБРАЗОВАНИЯ
+                        h2.block-subtitle.block-subtitle_slider
                     .slider-info__text
                         p
-                            span HTML, CSS, JAVASCRIPT
+                            span
                     a.slider-info__link(href='#')
                         i(class='fa fa-link slider-info__link-icon' aria-hidden='true')
                         span.slider-info__link-text Посмотреть сайт
-                        //todo: нужно будет сделать список, когда буду делать слайдер
             .slider-img
                 .slider-img__container
+                    img.slider-img__picture(src=require('../../images/work-2.png') alt='')
             .slider-nav
                 .slider-nav__container
-                    a.slider-nav__btn(href='#')
+                    a.slider-nav__btn.slider-nav__btn_left(href='#')
                         svg.slider-nav__down-icon
                             use(xlink:href=require('../../images/icons/sprite.svg') + '#portf_arrow_down')
                     ul.slider-nav__list.slider-nav__list_left
-                        li.slider-nav__item.slider-nav__item_1
-                        li.slider-nav__item.slider-nav__item_2
-                        li.slider-nav__item.slider-nav__item_3
-                        li.slider-nav__item.slider-nav__item_4
+                        li.slider-nav__item.slider-nav__item_active
+                            img.slider-nav__img(src=require('../../images/work-1.png') alt='')
+                        li.slider-nav__item
+                            img.slider-nav__img(src=require('../../images/work-2.png') alt='')
+                        li.slider-nav__item
+                            img.slider-nav__img(src=require('../../images/work-3.png') alt='')
+                        li.slider-nav__item
+                            img.slider-nav__img(src=require('../../images/work-4.png') alt='')
                 .slider-nav__container
-                    a.slider-nav__btn(href='#')
+                    a.slider-nav__btn.slider-nav__btn_right(href='#')
                         svg.slider-nav__up-icon
                             use(xlink:href=require('../../images/icons/sprite.svg') + '#portf_arrow_up')
                     ul.slider-nav__list.slider-nav__list_right
-                        li.slider-nav__item.slider-nav__item_1
-                        li.slider-nav__item.slider-nav__item_2
-                        li.slider-nav__item.slider-nav__item_3
-                        li.slider-nav__item.slider-nav__item_4
+                        li.slider-nav__item
+                            img.slider-nav__img(src=require('../../images/work-1.png') alt='')
+                        li.slider-nav__item
+                            img.slider-nav__img(src=require('../../images/work-2.png') alt='')
+                        li.slider-nav__item.slider-nav__item_active
+                            img.slider-nav__img(src=require('../../images/work-3.png') alt='')
+                        li.slider-nav__item
+                            img.slider-nav__img(src=require('../../images/work-4.png') alt='')
     section.about-me
         .about-me__title
             h2.about-me__title-text ЧТО ОБО МНЕ ГОВОРЯТ

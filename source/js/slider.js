@@ -1,139 +1,190 @@
-/*
-export default class Slider {
-    constructor() {
-        if (document.querySelector('.slider-slide')) {
+let slider = (function () {
+  let counter = 0;
+  const duration = 300;
+  let inProcess = false;
+  let counterLeft = counter - 1;
+  let counterRight = counter + 1;
+  const leftList = $('.slider-nav__list_left');
+  const rightList = $('.slider-nav__list_right');
 
-            this.slide_right = document.querySelector('.slider-slide__list--right')
-            this.slide_left  = document.querySelector('.slider-slide__list--left')
-            this.slide_head  = document.querySelector('.slider-slide__img')
-            this.capt        = document.querySelector('.slider-text__capt')
-            this.tech        = document.querySelector('.slider-text__tech')
-            this.link        = document.querySelector('.slider-text__link')
+  const data = [
+    {
+      name: 'Сайт 1 web-dev',
+      description: 'Используемые технологии 1',
+      link: '#',
+    },
+    {
+      name: 'Сайт 2 ItLoft',
+      description: 'Используемые технологии 2',
+      link: '#',
+    },
+    {
+      name: 'Сайт 3 Jquery',
+      description: 'Используемые технологии 3',
+      link: '#',
+    },
+    {
+      name: 'Сайт 4 Yoga',
+      description: 'Используемые технологии 4',
+      link: '#',
+    },
+  ];
 
-            this.isAnim = false
-            this.slide  = [
-                {
-                    src: '../assets/images/content/my-site-mon.png',
-                    name: 'Сайт портфолио',
-                    tech: 'Sass/Pug, Vue.js, node.js',
-                    link: '#'
-                },
-                {
-                    src: '../assets/images/content/afrodita.png',
-                    name: 'Корпоротивный сайт фитнесс клуба',
-                    tech: 'HTML5, CSS3',
-                    link: '#'
-                },
-                {
-                    src: '../assets/images/content/adaptive.png',
-                    name: 'Сайт бургерной',
-                    tech: 'HTML5, sass, jquery, php',
-                    link: '#'
-                }
-            ]
+  //console.log(data[0].name);
 
-            this.slideAdd(this.slide)
 
-            const first_img = this.slide_left.children[0].children[0].getAttribute('src')
-            this.add_text(first_img)
+  let moveSlide = function (container, direction) {
+    //console.log(container);
+    let items = $('.slider-nav__item', container);
+    let activeItem = items.filter('.slider-nav__item_active');
+    //console.log(items);
+    /* console.log('test');
+    console.log(counterLeft);
+    console.log(counterRight);*/
 
-            this.slide_head.setAttribute('src', first_img)
-            this.slide_left.insertBefore(this.slide_left.children[this.slide_left.children.length-1], this.slide_left.children[1])
-
-            this.slide_left.addEventListener('click', e => {
-                this.slideMove(false)
-            })
-
-            this.slide_right.addEventListener('click', e => {
-                this.slideMove(true)
-            })
-
-            setInterval(()=> this.isAnim = false, 2000)
-        }
+    //if(counter >= items.length) counter = 0;
+    if(counterLeft >= items.length) {
+      counterLeft = 0;
+    } else if (counterLeft < 0) {
+      counterLeft = items.length - 1;
     }
 
-    slideAdd(slide) {
-        for (let i = 0; i < slide.length; i++) {
-            const li  = document.createElement('li')
-            const img = document.createElement('img')
-            li.classList.add('slider-slide__item')
-            img.classList.add('slider-slide__img')
-            img.setAttribute('src', slide[i].src)
-            li.appendChild(img)
-            this.slide_left.appendChild(li)
-        }
-
-        for (let i = 0; i < slide.length; i++) {
-            const li  = document.createElement('li')
-            const img = document.createElement('img')
-            li.classList.add('slider-slide__item')
-            img.classList.add('slider-slide__img')
-            img.setAttribute('src', slide[i].src)
-            li.appendChild(img)
-            this.slide_right.appendChild(li)
-        }
-    }
-
-    slideMove(flag) {
-
-        if (this.isAnim) return
-
-        this.isAnim = true
-
-        const height = document.querySelector('.slider-slide__slides').clientHeight
-
-        if (flag===true) {
-            this.slide_right.style.transition = 'transform 1s'
-            this.slide_left.style.transition = 'transform 1s'
-            this.slide_right.style.transform  = `translateY(-${height}px)`
-            this.slide_left.style.transform   = `translateY(${height}px)`
-            this.change_head(this.slide_right)
-        } else {
-            this.slide_right.style.transition = 'transform 1s'
-            this.slide_left.style.transition = 'transform 1s'
-            this.slide_right.style.transform = `translateY(${height}px)`
-            this.slide_left.style.transform  = `translateY(-${height}px)`
-            this.change_head(this.slide_left)
-        }
-
-        setTimeout(() => this.append_ins(flag), 1200)
+    if(counterRight >= items.length) {
+      counterRight = 0;
+    } else if (counterRight < 0) {
+      counterRight = items.length - 1;
     }
 
 
-    append_ins(flag=false) {
+    /*console.log('test2');
+    console.log(counterLeft);
+    console.log(counterRight);*/
 
-        this.slide_left.removeAttribute('style')
-        this.slide_right.removeAttribute('style')
 
-        if (flag) {
-            this.slide_right.appendChild(this.slide_right.children[0])
-            this.slide_left.insertBefore(this.slide_left.children[this.slide_left.children.length-1], this.slide_left.children[0])
-            this.slide_right.children[0].cloneNode(true)
-            this.slide_left.lastChild.cloneNode(true)
-        } else {
-            this.slide_left.appendChild(this.slide_left.children[0])
-            this.slide_right.insertBefore(this.slide_right.children[this.slide_right.children.length-1], this.slide_right.children[0])
-            this.slide_left.children[0].cloneNode(true)
-            this.slide_right.lastChild.cloneNode(true)
+    let reqItemLeft = items.eq(counterLeft);
+    let reqItemRight = items.eq(counterRight);
+
+    /*console.log('test3');
+    console.log(reqItemLeft);
+    console.log(reqItemRight);*/
+
+    console.log(direction);
+    if (direction === 'down') {
+      activeItem.animate({
+        'top' : '100%',
+      }, duration);
+
+      reqItemLeft.animate({
+        'top' : '0',
+      }, duration, function () {
+        activeItem.removeClass('slider-nav__item_active').css('top', '-100%');
+        $(this).addClass('slider-nav__item_active');
+        inProcess = false;
+      });
+    }
+
+    if(direction === 'up') {
+      activeItem.animate({
+        'top' : '-100%',
+      }, duration);
+
+      reqItemRight.animate({
+        'top' : '0',
+      }, duration, function () {
+        activeItem.removeClass('slider-nav__item_active').css('top', '100%');
+        $(this).addClass('slider-nav__item_active');
+        inProcess = false;
+      });
+    }
+
+  };
+
+  let changePicture = function (list) {
+
+    let activeCurrent = $('.slider-nav__item_active', list);
+    let srcImg = activeCurrent.find('.slider-nav__img').attr('src');
+    $('.slider-img__picture').attr('src', srcImg);
+
+  };
+
+  let fillInfo = function (direction) {
+    let items = $('.slider-nav__item', '.slider-nav__list_left');
+    let numberData = 1;
+
+    //console.log('click ' + direction);
+    //console.log(numberData + '-numberData ' + counterLeft + '-left ' + counterRight + '-right начало');
+    /*console.log(numberData);
+    console.log(counterLeft + ' left');
+    console.log(counterRight + ' right');*/
+
+    if(direction === 'down') {
+      numberData = counterLeft + 1;
+    }else if (direction === 'up') {
+      numberData = counterRight - 1;
+    }
+
+    //console.log(numberData + '-numberData ' + counterLeft + '-left ' + counterRight + '-right после изменения numberData и перед её валидацией');
+    //console.log(counterLeft + ' left');
+    //console.log(counterRight + ' right');
+
+    if(numberData >= items.length) {
+      numberData = 0;
+    } else if (numberData < 0) {
+      numberData = items.length - 1;
+    }
+
+    //console.log(numberData + '-numberData ' + counterLeft + '-left ' + counterRight + '-right перед добавлением текста');
+    /*console.log(numberData);
+    console.log(counterLeft + ' left');
+    console.log(counterRight + ' right');*/
+
+    $('.block-subtitle_slider').text(data[numberData].name);
+    $('.slider-info__text p span').text(data[numberData].description);
+    $('.slider-info__link').attr('href', data[numberData].link);
+
+  };
+
+  return {
+    init: function () {
+      $('.slider-nav__btn_left').on('click', function (e) {
+        e.preventDefault();
+
+        if(!inProcess) {
+          inProcess = true;
+          moveSlide(leftList, 'down');
+          moveSlide(rightList, 'up');
+          changePicture(leftList);
+          fillInfo('down');
         }
-        const trans = { complete:true }
-        return trans
-    }
 
-    change_head(elem) {
-        const img = elem.children[1].children[0].getAttribute('src')
-        this.slide_head.setAttribute('src', img)
-        this.add_text(img)
-    }
 
-    add_text(src) {
-        for (let i = 0; i < this.slide.length; i++) {
+        counterLeft--;
+        counterRight--;
+        //counter++;
+      });
 
-            if (src == this.slide[i].src) {
-                this.capt.textContent = this.slide[i].name
-                this.tech.textContent = this.slide[i].tech
-                this.link.setAttribute('href', this.slide[i].link)
-            }
+      $('.slider-nav__btn_right').on('click', function (e) {
+        e.preventDefault();
+
+        if(!inProcess) {
+          inProcess = true;
+          moveSlide(leftList, 'down');
+          moveSlide(rightList, 'up');
+          changePicture(rightList);
+          fillInfo('up');
         }
-    }
-}*/
+
+
+        counterLeft++;
+        counterRight++;
+        //counter++;
+      });
+
+      fillInfo();
+    },
+  };
+}());
+
+$(function () {
+  slider.init();
+});
