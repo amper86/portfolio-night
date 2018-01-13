@@ -30,19 +30,12 @@ let slider = (function () {
     },
   ];
 
-  //console.log(data[0].name);
-
 
   let moveSlide = function (container, direction) {
-    //console.log(container);
     let items = $('.slider-nav__item', container);
     let activeItem = items.filter('.slider-nav__item_active');
-    //console.log(items);
-    /* console.log('test');
-    console.log(counterLeft);
-    console.log(counterRight);*/
 
-    //if(counter >= items.length) counter = 0;
+
     if(counterLeft >= items.length) {
       counterLeft = 0;
     } else if (counterLeft < 0) {
@@ -56,17 +49,9 @@ let slider = (function () {
     }
 
 
-    /*console.log('test2');
-    console.log(counterLeft);
-    console.log(counterRight);*/
-
-
     let reqItemLeft = items.eq(counterLeft);
     let reqItemRight = items.eq(counterRight);
 
-    /*console.log('test3');
-    console.log(reqItemLeft);
-    console.log(reqItemRight);*/
 
     console.log(direction);
     if (direction === 'down') {
@@ -99,44 +84,24 @@ let slider = (function () {
 
   };
 
-  let changePicture = function (list) {
+  let changePictureAndInfo = function (list) {
 
     let activeCurrent = $('.slider-nav__item_active', list);
     let srcImg = activeCurrent.find('.slider-nav__img').attr('src');
+    let dataValue = activeCurrent.attr('data-order');
+
+
     $('.slider-img__picture').attr('src', srcImg);
+
+    $('.block-subtitle_slider').text(data[dataValue].name);
+    $('.slider-info__text p span').text(data[dataValue].description);
+    $('.slider-info__link').attr('href', data[dataValue].link);
 
   };
 
-  let fillInfo = function (direction) {
-    let items = $('.slider-nav__item', '.slider-nav__list_left');
+  let startFillInfo = function () {
+
     let numberData = 1;
-
-    //console.log('click ' + direction);
-    //console.log(numberData + '-numberData ' + counterLeft + '-left ' + counterRight + '-right начало');
-    /*console.log(numberData);
-    console.log(counterLeft + ' left');
-    console.log(counterRight + ' right');*/
-
-    if(direction === 'down') {
-      numberData = counterLeft + 1;
-    }else if (direction === 'up') {
-      numberData = counterRight - 1;
-    }
-
-    //console.log(numberData + '-numberData ' + counterLeft + '-left ' + counterRight + '-right после изменения numberData и перед её валидацией');
-    //console.log(counterLeft + ' left');
-    //console.log(counterRight + ' right');
-
-    if(numberData >= items.length) {
-      numberData = 0;
-    } else if (numberData < 0) {
-      numberData = items.length - 1;
-    }
-
-    //console.log(numberData + '-numberData ' + counterLeft + '-left ' + counterRight + '-right перед добавлением текста');
-    /*console.log(numberData);
-    console.log(counterLeft + ' left');
-    console.log(counterRight + ' right');*/
 
     $('.block-subtitle_slider').text(data[numberData].name);
     $('.slider-info__text p span').text(data[numberData].description);
@@ -153,14 +118,11 @@ let slider = (function () {
           inProcess = true;
           moveSlide(leftList, 'down');
           moveSlide(rightList, 'up');
-          changePicture(leftList);
-          fillInfo('down');
+          changePictureAndInfo(leftList);
         }
-
 
         counterLeft--;
         counterRight--;
-        //counter++;
       });
 
       $('.slider-nav__btn_right').on('click', function (e) {
@@ -170,17 +132,14 @@ let slider = (function () {
           inProcess = true;
           moveSlide(leftList, 'down');
           moveSlide(rightList, 'up');
-          changePicture(rightList);
-          fillInfo('up');
+          changePictureAndInfo(rightList);
         }
-
 
         counterLeft++;
         counterRight++;
-        //counter++;
       });
 
-      fillInfo();
+      startFillInfo();
     },
   };
 }());
