@@ -1,3 +1,5 @@
+import 'babel-polyfill';
+
 import './index.pug';
 import 'normalize.css';
 import '../../scss/main.scss';

@@ -1,11 +1,15 @@
 .greeting-container {
   background-color: $transp-bg;
   color: #ffffff;
+  -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   transition: .3s linear;
   position: relative;
   &__face {
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    -webkit-transform: rotateY(0);
+    -moz-transform: rotateY(0);
     transform: rotateY(0);
   }
   &__main {
@@ -30,7 +34,10 @@
     }
   }
   &__back {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
     transform: rotateY(180deg);
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     position: absolute;
     top: 0;

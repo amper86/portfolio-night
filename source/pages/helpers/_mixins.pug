@@ -47,10 +47,10 @@ mixin test
 mixin info
     -
         var contacts = [
-        ['skype_kdn', 'skype_n_test', 'skype:'],
-        ['astahov@gmail.com', 'envelope_n', 'mailto:'],
-        ['+7 931 200 93 24', 'phone_n', 'tel:'],
-        ['Новосибирск, ул. Инская, д.14', 'map_n', '#']
+        ['amper1131', 'skype_n_test', 'skype:'],
+        ['o.mullakaev@gmail.com', 'envelope_n', 'mailto:'],
+        ['+7 926 273 52 92', 'phone_n', 'tel:'],
+        ['Москва', 'map_n', '#']
         ]
     ul.contacts__list
         each contact in contacts
@@ -64,10 +64,10 @@ mixin info
 mixin info-footer
     -
         var info = [
-            ['skype:', 'skype_kdn'],
-            ['mailto:', 'astahov@gmail.com'],
-            ['tel:', '+79312009324'],
-            ['#', 'Новосибирск']
+            ['skype:', 'amper1131'],
+            ['mailto:', 'o.mullakaev@gmail.com'],
+            ['tel:', '+7 9262735292'],
+            ['#', 'Москва']
         ]
     ul.footer__contact-list
         each item in info
@@ -75,7 +75,7 @@ mixin info-footer
                 a.footer__link(href=`${item[0]}` + `${item[1]}`) #{item[1]}
 
 mixin copyright(className)
-    p(class='copyright ' + `${className}`) &copy;	Владимир Астахов | Создано с любовью в Loftschool | 2017
+    p(class='copyright ' + `${className}`) &copy;	Олег Муллакаев | Создано с любовью в Loftschool | 2017
 
 mixin header(titleClass, titleText, descriptionText, ifHide)
     header.header

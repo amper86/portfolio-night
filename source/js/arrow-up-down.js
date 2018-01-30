@@ -3,12 +3,12 @@ module.exports = $(function () {
     e.preventDefault();
 
     let headerHeight = $('.header').height();
-    $('html').animate({'scrollTop': headerHeight}, 300, 'swing');
+    $('html, body').animate({'scrollTop': headerHeight}, 400, 'swing');
   });
 
   $('.about-me__arrow-link').on('click', function (e) {
     e.preventDefault();
 
-    $('html').animate({'scrollTop': '0'}, 300, 'swing');
+    $('html, body').animate({'scrollTop': '0'}, 400, 'swing');
   });
 });

@@ -17,6 +17,6 @@ module.exports = $(function () {
     //$(window).scrollTop(textItemOffset);
     //console.log(textItem.scrollTop(textItemOffset));
     //window.scrollTo(0, textItemOffset);
-    $('html').stop().animate({'scrollTop': textItemOffset}, 300, 'swing');
+    $('html, body').stop().animate({'scrollTop': textItemOffset}, 300, 'swing');
   });
 });

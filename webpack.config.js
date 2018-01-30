@@ -22,10 +22,10 @@ console.log('Build for production started');
 module.exports = {
     // Entry directories
     entry  : {
-        index      : proj_path.pages.index    + '/index.js',
-	    blog       : proj_path.pages.blog     + '/blog.js',
-	    about      : proj_path.pages.about     + '/about.js',
-	    works      : proj_path.pages.works     + '/works.js'
+        index      : ['babel-polyfill', path.join(proj_path.pages.index + '/index.js')],
+	    blog       : ['babel-polyfill', path.join(proj_path.pages.blog  + '/blog.js')],
+	    about      : ['babel-polyfill', path.join(proj_path.pages.about + '/about.js')],
+	    works      : ['babel-polyfill', path.join(proj_path.pages.works + '/works.js')]
     }, 
     // Output dirrectory
     output : {

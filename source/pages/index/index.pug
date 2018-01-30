@@ -2,7 +2,7 @@ extends ../base
 include ../helpers/_mixins
 
 block head
-    title Владимир Астахов
+    title Олег Муллакаев
 
 block content
     .preloader
@@ -24,13 +24,13 @@ block content
                         .img-container.greeting-container__img
                             img.img-container__avatar(src=require('../../images/avatar.jpg'))
                         .info.greeting-container__info
-                            h1.info__name Владимир Астахов
+                            h1.info__name Олег Муллакаев
                             p.info__description Личный сайт веб разработчика
                         +socials('greeting-container', 'welcome')
                     nav.greeting-container__nav
                         +navigation([['./works.html', 'Мои работы'], ['./about.html', 'Обо мне'], ['./blog.html', 'Блог']], 'welcome')
                 .greeting-container__back
-                    h2.greeting-container__autorization-title АТОРИЗУЙТЕСЬ
+                    h2.greeting-container__autorization-title АВТОРИЗУЙТЕСЬ
                     .form
                         form.form__elem(method='post' id='form-auth')
                             .form__wrapper
