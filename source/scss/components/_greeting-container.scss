@@ -53,4 +53,9 @@
       font-size: rem(30px);
     }
   }
+  &_flip {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
 }

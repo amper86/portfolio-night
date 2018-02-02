@@ -1,7 +1,6 @@
 .form-feedback {
   width: rem(380px);
   position: relative;
-  //background-color: rgba(255,255,255, .05);
   z-index: 5;
   @include phones {
     width: 100%;
@@ -28,7 +27,7 @@
     width: 100%;
     outline: none;
     background-color: rgba(255,255,255, .07);
-    border: none;
+    border: 2px solid transparent;
     padding: rem(18px);
     color: #ffffff;
     &_textarea {
@@ -59,6 +58,35 @@
       color: rgba(255,255,255, .5);
       &:hover {
         text-decoration: underline;
+      }
+    }
+  }
+  &__popup {
+    display: none;
+    padding: rem(20px);
+    width: rem(200px);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    border-radius: rem(5px);
+    &-text {
+      display: block;
+      text-align: center;
+    }
+    &-button {
+      display: block;
+      padding: rem(15px) rem(20px);
+      margin: rem(20px) auto 0;
+      outline: none;
+      border: none;
+      border-radius: rem(5px);
+      background-color: $light;
+      color: #ffffff;
+      &:hover {
+        background-color: $dark;
       }
     }
   }

@@ -7,3 +7,4 @@ import '../../js/scroll-parallax';
 import '../../js/slider';
 import '../../js/arrow-up-down';
 import '../../js/blur';
+import '../../js/feedback-form';

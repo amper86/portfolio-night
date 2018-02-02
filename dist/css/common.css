@@ -2879,6 +2879,10 @@ body {
     @media screen and (max-width: 768px) {
       .greeting-container__autorization-title {
         font-size: 1.875rem; } }
+  .greeting-container_flip {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    transform: rotateY(180deg); }
 
 .img-container {
   border-radius: 50%;
@@ -3029,7 +3033,8 @@ body {
     position: absolute;
     bottom: 40vh;
     left: 50%;
-    transform: translateX(-50%); }
+    transform: translateX(-50%);
+    z-index: 5; }
     .header__arrow-icon {
       width: 1.625rem;
       height: 1rem;
@@ -4140,7 +4145,7 @@ body {
     width: 100%;
     outline: none;
     background-color: rgba(255, 255, 255, 0.07);
-    border: none;
+    border: 2px solid transparent;
     padding: 1.125rem;
     color: #ffffff; }
     .form-feedback__input-text_textarea {
@@ -4170,3 +4175,28 @@ body {
       color: rgba(255, 255, 255, 0.5); }
       .form-feedback__btn_reset:hover {
         text-decoration: underline; }
+  .form-feedback__popup {
+    display: none;
+    padding: 1.25rem;
+    width: 12.5rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    border-radius: 0.3125rem; }
+    .form-feedback__popup-text {
+      display: block;
+      text-align: center; }
+    .form-feedback__popup-button {
+      display: block;
+      padding: 0.9375rem 1.25rem;
+      margin: 1.25rem auto 0;
+      outline: none;
+      border: none;
+      border-radius: 0.3125rem;
+      background-color: #0548be;
+      color: #ffffff; }
+      .form-feedback__popup-button:hover {
+        background-color: #083c96; }
