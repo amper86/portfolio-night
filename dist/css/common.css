@@ -3392,7 +3392,7 @@ body {
   width: 100%;
   padding: 0 1.25rem;
   height: 2.8125rem;
-  border: none;
+  border: 2px solid transparent;
   outline: none;
   color: #373e42; }
 
