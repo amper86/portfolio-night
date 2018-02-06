@@ -9,24 +9,24 @@ let slider = (function () {
 
   const data = [
     {
-      name: 'Сайт 1 web-dev',
-      description: 'Используемые технологии 1',
-      link: '#',
+      name: 'Фитнес-клуб Афродита',
+      description: 'CSS, HTML',
+      link: 'http://fitness.cg54542.tmweb.ru/',
     },
     {
-      name: 'Сайт 2 ItLoft',
-      description: 'Используемые технологии 2',
-      link: '#',
+      name: 'Лендинг Бургерной',
+      description: 'Git,SASS/SCSS, JQuery, Gulp, SVG, Ajax, PHP',
+      link: 'http://burger.cg54542.tmweb.ru/',
     },
     {
-      name: 'Сайт 3 Jquery',
-      description: 'Используемые технологии 3',
-      link: '#',
+      name: 'Моё портфолио',
+      description: 'Git,Pug, Webpack, SVG, VueJS',
+      link: 'http://myportfolio.cg54542.tmweb.ru/',
     },
     {
-      name: 'Сайт 4 Yoga',
-      description: 'Используемые технологии 4',
-      link: '#',
+      name: 'Админка для портфолио',
+      description: 'Git, VueJS, Vuex, Vue-router',
+      link: 'http://adminp.cg54542.tmweb.ru/',
     },
   ];
 
