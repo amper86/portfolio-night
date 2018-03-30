@@ -2,4 +2,8 @@ import './about.pug';
 import 'normalize.css';
 import '../../scss/main.scss';
 
-console.log('about');
+import '../../js/menu';
+import '../../js/scroll-parallax';
+import '../../js/arrow-up-down';
+import '../../js/about-skills';
+import '../../js/map';

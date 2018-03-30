@@ -2,6 +2,12 @@
   width: 580px;
   background-color: rgba(255,255,255, .5);
   padding: rem(25px) rem(20px);
+  @include tablets {
+    width: auto;
+  }
+  @include phones {
+    background-color: #fcfcfc;
+  }
   &__title {
     text-align: center;
     margin-bottom: rem(30px);
@@ -9,21 +15,35 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
+    @include tablets {
+      flex-direction: column;
+    }
   }
   &__item {
     width: 50%;
     margin-bottom: rem(30px);
+    white-space: nowrap;
+    @include tablets {
+      width: 100%;
+      margin-bottom: rem(20px);
+    }
     &:nth-child(1) {
       order: 0;
     }
     &:nth-child(2) {
-      order: 15;
+      order: 10;
+      @include tablets {
+        order: 5;
+      }
     }
     &:nth-child(3) {
-      order: 10;
+      order: 5;
+      @include tablets {
+        order: 10;
+      }
     }
     &:nth-child(4) {
-      order: 20;
+      order: 15;
     }
   }
 }

@@ -10,6 +10,7 @@
   <body>
     <div class="wrapper">
       <header class="header">
+        <div class="header__bg"><img class="header__bg-img" src="images/mount1-min.png"></div>
         <!--Социалки className-вводим класс родительского блока-->
         <!--classStyle вводим имя модификатора для стилизации-->
         <!--стили в _socials.scss-->
@@ -30,7 +31,7 @@
         <div class="header__greeting-container">
           <div class="img-container header__img-container"><img class="img-container__avatar" src="images/avatar.jpg"></div>
           <div class="header__info info">
-            <h2 class="info__name">Владимир Астахов</h2>
+            <h2 class="info__name">Олег Муллакаев</h2>
             <p class="info__description">Личный сайт веб разработчика</p>
           </div>
         </div><a class="header__arrow undefined" href="#">
@@ -52,38 +53,37 @@
           <div class="slider-info">
             <div class="slider-info__container">
               <div class="slider-info__title">
-                <h2 class="block-subtitle">САЙТ ШКОЛЫ ОНЛАЙН ОБРАЗОВАНИЯ</h2>
+                <h2 class="block-subtitle block-subtitle_slider"></h2>
               </div>
               <div class="slider-info__text">
-                <p><span>HTML, CSS, JAVASCRIPT</span></p>
-              </div><a class="slider-info__link" href="#"><i class="fa fa-link slider-info__link-icon" aria-hidden="true"></i><span class="slider-info__link-text">Посмотреть сайт</span>
-                <!--todo: нужно будет сделать список, когда буду делать слайдер--></a>
+                <p><span></span></p>
+              </div><a class="slider-info__link" href="#" target="_blank"><i class="fa fa-link slider-info__link-icon" aria-hidden="true"></i><span class="slider-info__link-text">Посмотреть сайт</span></a>
             </div>
           </div>
           <div class="slider-img">
-            <div class="slider-img__container"></div>
+            <div class="slider-img__container"><img class="slider-img__picture" src="images/work-2.png" alt=""></div>
           </div>
           <div class="slider-nav">
-            <div class="slider-nav__container"><a class="slider-nav__btn" href="#">
+            <div class="slider-nav__container"><a class="slider-nav__btn slider-nav__btn_left" href="#">
                 <svg class="slider-nav__down-icon">
                   <use xlink:href="images/sprite.svg#portf_arrow_down"></use>
                 </svg></a>
               <ul class="slider-nav__list slider-nav__list_left">
-                <li class="slider-nav__item slider-nav__item_1"></li>
-                <li class="slider-nav__item slider-nav__item_2"></li>
-                <li class="slider-nav__item slider-nav__item_3"></li>
-                <li class="slider-nav__item slider-nav__item_4"></li>
+                <li class="slider-nav__item slider-nav__item_active" data-order="0"><img class="slider-nav__img" src="images/afrodita.png" alt=""></li>
+                <li class="slider-nav__item" data-order="1"><img class="slider-nav__img" src="images/burger.png" alt=""></li>
+                <li class="slider-nav__item" data-order="2"><img class="slider-nav__img" src="images/portfolio.png" alt=""></li>
+                <li class="slider-nav__item" data-order="3"><img class="slider-nav__img" src="images/admin.jpg" alt=""></li>
               </ul>
             </div>
-            <div class="slider-nav__container"><a class="slider-nav__btn" href="#">
+            <div class="slider-nav__container"><a class="slider-nav__btn slider-nav__btn_right" href="#">
                 <svg class="slider-nav__up-icon">
                   <use xlink:href="images/sprite.svg#portf_arrow_up"></use>
                 </svg></a>
               <ul class="slider-nav__list slider-nav__list_right">
-                <li class="slider-nav__item slider-nav__item_1"></li>
-                <li class="slider-nav__item slider-nav__item_2"></li>
-                <li class="slider-nav__item slider-nav__item_3"></li>
-                <li class="slider-nav__item slider-nav__item_4"></li>
+                <li class="slider-nav__item" data-order="0"><img class="slider-nav__img" src="images/afrodita.png" alt=""></li>
+                <li class="slider-nav__item" data-order="1"><img class="slider-nav__img" src="images/burger.png" alt=""></li>
+                <li class="slider-nav__item slider-nav__item_active" data-order="2"><img class="slider-nav__img" src="images/portfolio.png" alt=""></li>
+                <li class="slider-nav__item" data-order="3"><img class="slider-nav__img" src="images/admin.jpg" alt=""></li>
               </ul>
             </div>
           </div>
@@ -110,8 +110,9 @@
           </ul>
         </div>
         <div class="about-me__form">
+          <div class="about-me__form-blure"></div>
           <div class="form-feedback">
-            <form class="form-feedback__elem" method="post" id="form-feedback">
+            <form class="form-feedback__elem" action="form.php" method="post" id="form-feedback">
               <div class="form-feedback__wrapper">
                 <div class="form-feedback__title">
                   <h2 class="block-subtitle form-feedback__title-text">СВЯЗАТЬСЯ СО МНОЙ</h2>
@@ -130,6 +131,9 @@
                 <button class="form-feedback__btn form-feedback__btn_submit" type="submit">Отправить</button>
                 <button class="form-feedback__btn form-feedback__btn_reset" type="reset">Очистить</button>
               </div>
+              <div class="form-feedback__popup"><span class="form-feedback__popup-text">TEST test</span>
+                <button class="form-feedback__popup-button" type="button">Закрыть</button>
+              </div>
             </form>
           </div>
         </div>
@@ -140,11 +144,10 @@
       </section>
       <footer class="footer">
         <div class="footer__container">
-          <div class="footer__col footer__col-left">
-            <p>Этот сайт я сделал в рамках обучения в Школе</p>
-            <p>онлайн образования LoftSchool.</p>
+          <div class="footer__col footer__col_left">
+            <p>Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.</p>
           </div>
-          <div class="footer__col footer__col-center">
+          <div class="footer__col footer__col_center">
             <nav class="footer__nav">
               <!--infoNav принимает массив 0-путь ссылки 1-текст ссылки-->
               <!--className принимает названия можификатора у li-->
@@ -173,16 +176,16 @@
                   </svg></a></li>
             </ul>
           </div>
-          <div class="footer__col footer__col-right">
+          <div class="footer__col footer__col_right">
             <ul class="footer__contact-list">
-              <li class="footer__item"><a class="footer__link" href="skype:skype_kdn">skype_kdn</a></li>
-              <li class="footer__item"><a class="footer__link" href="mailto:astahov@gmail.com">astahov@gmail.com</a></li>
-              <li class="footer__item"><a class="footer__link" href="tel:+79312009324">+79312009324</a></li>
-              <li class="footer__item"><a class="footer__link" href="#Новосибирск">Новосибирск</a></li>
+              <li class="footer__item"><a class="footer__link" href="skype:amper1131">amper1131</a></li>
+              <li class="footer__item"><a class="footer__link" href="mailto:o.mullakaev@gmail.com">o.mullakaev@gmail.com</a></li>
+              <li class="footer__item"><a class="footer__link" href="tel:+7 9262735292">+7 9262735292</a></li>
+              <li class="footer__item"><a class="footer__link" href="#Москва">Москва</a></li>
             </ul>
           </div>
         </div>
-        <p class="copyright footer__copyright">&copy;	Владимир Астахов | Создано с любовью в Loftschool | 2017</p>
+        <p class="copyright footer__copyright">&copy;	Олег Муллакаев | Создано с любовью в Loftschool | 2017</p>
       </footer>
     </div>
   <script type="text/javascript" src="./js/common.js"></script><script type="text/javascript" src="./js/works.js"></script></body>

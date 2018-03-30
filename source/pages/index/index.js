@@ -1,5 +1,10 @@
+import 'babel-polyfill';
+
 import './index.pug';
 import 'normalize.css';
 import '../../scss/main.scss';
 
-console.log('index');
+import '../../js/preloader';
+import '../../js/flip';
+import '../../js/parallax';
+import '../../js/aut-form';

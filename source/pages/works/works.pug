@@ -4,7 +4,7 @@ include ../helpers/_mixins
 block head
     title Мои работы
 block content
-    +header('info__name', 'Владимир Астахов', 'Личный сайт веб разработчика')
+    +header('info__name', 'Олег Муллакаев', 'Личный сайт веб разработчика')
     section.works
         .works__triangle
             svg.works__triangle-icon(xmlns="http://www.w3.org/2000/svg", viewbox='0 0 1000 85', preserveAspectRatio="none")
@@ -16,35 +16,43 @@ block content
             .slider-info
                 .slider-info__container
                     .slider-info__title
-                        h2.block-subtitle САЙТ ШКОЛЫ ОНЛАЙН ОБРАЗОВАНИЯ
+                        h2.block-subtitle.block-subtitle_slider
                     .slider-info__text
                         p
-                            span HTML, CSS, JAVASCRIPT
-                    a.slider-info__link(href='#')
+                            span
+                    a.slider-info__link(href='#' target="_blank")
                         i(class='fa fa-link slider-info__link-icon' aria-hidden='true')
                         span.slider-info__link-text Посмотреть сайт
-                        //todo: нужно будет сделать список, когда буду делать слайдер
             .slider-img
                 .slider-img__container
+                    img.slider-img__picture(src=require('../../images/work-2.png') alt='')
             .slider-nav
                 .slider-nav__container
-                    a.slider-nav__btn(href='#')
+                    a.slider-nav__btn.slider-nav__btn_left(href='#')
                         svg.slider-nav__down-icon
                             use(xlink:href=require('../../images/icons/sprite.svg') + '#portf_arrow_down')
                     ul.slider-nav__list.slider-nav__list_left
-                        li.slider-nav__item.slider-nav__item_1
-                        li.slider-nav__item.slider-nav__item_2
-                        li.slider-nav__item.slider-nav__item_3
-                        li.slider-nav__item.slider-nav__item_4
+                        li.slider-nav__item.slider-nav__item_active(data-order='0')
+                            img.slider-nav__img(src=require('../../images/afrodita.png') alt='')
+                        li.slider-nav__item(data-order='1')
+                            img.slider-nav__img(src=require('../../images/burger.png') alt='')
+                        li.slider-nav__item(data-order='2')
+                            img.slider-nav__img(src=require('../../images/portfolio.png') alt='')
+                        li.slider-nav__item(data-order='3')
+                            img.slider-nav__img(src=require('../../images/admin.jpg') alt='')
                 .slider-nav__container
-                    a.slider-nav__btn(href='#')
+                    a.slider-nav__btn.slider-nav__btn_right(href='#')
                         svg.slider-nav__up-icon
                             use(xlink:href=require('../../images/icons/sprite.svg') + '#portf_arrow_up')
                     ul.slider-nav__list.slider-nav__list_right
-                        li.slider-nav__item.slider-nav__item_1
-                        li.slider-nav__item.slider-nav__item_2
-                        li.slider-nav__item.slider-nav__item_3
-                        li.slider-nav__item.slider-nav__item_4
+                        li.slider-nav__item(data-order='0')
+                            img.slider-nav__img(src=require('../../images/afrodita.png') alt='')
+                        li.slider-nav__item(data-order='1')
+                            img.slider-nav__img(src=require('../../images/burger.png') alt='')
+                        li.slider-nav__item.slider-nav__item_active(data-order='2')
+                            img.slider-nav__img(src=require('../../images/portfolio.png') alt='')
+                        li.slider-nav__item(data-order='3')
+                            img.slider-nav__img(src=require('../../images/admin.jpg') alt='')
     section.about-me
         .about-me__title
             h2.about-me__title-text ЧТО ОБО МНЕ ГОВОРЯТ
@@ -65,8 +73,9 @@ block content
                         span.comments-list__text-name Сабанцев Владимир
                         span.comments-list__text-position — преподаватель
         .about-me__form
+            .about-me__form-blure
             .form-feedback
-                form.form-feedback__elem(method='post' id='form-feedback')
+                form.form-feedback__elem(action='form.php' method='post' id='form-feedback')
                     .form-feedback__wrapper
                         .form-feedback__title
                             h2.block-subtitle.form-feedback__title-text СВЯЗАТЬСЯ СО МНОЙ
@@ -79,6 +88,9 @@ block content
                     .form-feedback__row-btn
                         button.form-feedback__btn.form-feedback__btn_submit(type='submit') Отправить
                         button.form-feedback__btn.form-feedback__btn_reset(type='reset') Очистить
+                    .form-feedback__popup
+                        span.form-feedback__popup-text TEST test
+                        button.form-feedback__popup-button(type="button") Закрыть
         .about-me__arrow-up
             a(href='#' class='about-me__arrow-link')
                 svg.about-me__up-icon

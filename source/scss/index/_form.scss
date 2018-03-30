@@ -23,7 +23,7 @@
     width: 100%;
     padding: 0 rem(20px);
     height: rem(45px);
-    border: none;
+    border: 2px solid transparent;
     outline: none;
     color: #373e42;
   }
@@ -78,6 +78,9 @@
     display: flex;
     justify-content: center;
     margin-bottom: rem(40px);
+    @include phones {
+      margin-bottom: rem(20px);
+    }
   }
   &__block-radio {
     margin-right: rem(35px);

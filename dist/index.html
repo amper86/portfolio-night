@@ -4,88 +4,101 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
-    <title>Владимир Астахов</title><!--[if lt IE 9]>
+    <title>Олег Муллакаев</title><!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
   <link href="./css/common.css" rel="stylesheet"></head>
   <body>
+    <div class="preloader">
+      <svg class="preloader__svg" width="52.586px" height="63.73px" viewBox="0 0 56 76">
+        <circle class="preloader__svg-one" fill="none" stroke="#ffffff" stroke-width="2.5864" stroke-miterlimit="10" cx="26.293" cy="37.438" r="25"></circle>
+        <circle class="preloader__svg-two" fill="#ffffff" cx="26.293" cy="4.5" r="4.5"></circle>
+      </svg><span class="preloader__text"></span>
+    </div>
     <div class="wrapper-welcome">
+      <video class="wrapper-welcome__video" autoplay loop muted>
+        <source class="wrapper-welcome__video-source" src="media/night.mp4" type="video/mp4">
+      </video>
+      <div class="parallax">
+        <div class="parallax__layer"><img class="parallax__image" src="images/mount1-min.png"></div>
+      </div>
       <button class="btn-autorization wrapper-welcome__btn" type="button">Авторизоваться</button>
-      <div class="greeting-container wrapper-welcome__greeting-container">
-        <div class="greeting-container__face">
-          <div class="greeting-container__main">
-            <div class="img-container greeting-container__img"><img class="img-container__avatar" src="images/avatar.jpg"></div>
-            <div class="info greeting-container__info">
-              <h1 class="info__name">Владимир Астахов</h1>
-              <p class="info__description">Личный сайт веб разработчика</p>
+      <div class="wrapper-welcome__greeting-container">
+        <div class="greeting-container">
+          <div class="greeting-container__face">
+            <div class="greeting-container__main">
+              <div class="img-container greeting-container__img"><img class="img-container__avatar" src="images/avatar.jpg"></div>
+              <div class="info greeting-container__info">
+                <h1 class="info__name">Олег Муллакаев</h1>
+                <p class="info__description">Личный сайт веб разработчика</p>
+              </div>
+              <!--Социалки className-вводим класс родительского блока-->
+              <!--classStyle вводим имя модификатора для стилизации-->
+              <!--стили в _socials.scss-->
+              <ul class="socials greeting-container__socials">
+                <li class="socials__item"><a class="socials__link socials__link_welcome" href="https://vk.com/id3022300" target="_blank">
+                    <svg class="socials__icon">
+                      <use xlink:href="images/sprite.svg#vk"></use>
+                    </svg></a></li>
+                <li class="socials__item"><a class="socials__link socials__link_welcome" href="https://github.com/amper86" target="_blank">
+                    <svg class="socials__icon">
+                      <use xlink:href="images/sprite.svg#github"></use>
+                    </svg></a></li>
+                <li class="socials__item"><a class="socials__link socials__link_welcome" href="https://ru.linkedin.com" target="_blank">
+                    <svg class="socials__icon">
+                      <use xlink:href="images/sprite.svg#in"></use>
+                    </svg></a></li>
+              </ul>
             </div>
-            <!--Социалки className-вводим класс родительского блока-->
-            <!--classStyle вводим имя модификатора для стилизации-->
-            <!--стили в _socials.scss-->
-            <ul class="socials greeting-container__socials">
-              <li class="socials__item"><a class="socials__link socials__link_welcome" href="https://vk.com/id3022300" target="_blank">
-                  <svg class="socials__icon">
-                    <use xlink:href="images/sprite.svg#vk"></use>
-                  </svg></a></li>
-              <li class="socials__item"><a class="socials__link socials__link_welcome" href="https://github.com/amper86" target="_blank">
-                  <svg class="socials__icon">
-                    <use xlink:href="images/sprite.svg#github"></use>
-                  </svg></a></li>
-              <li class="socials__item"><a class="socials__link socials__link_welcome" href="https://ru.linkedin.com" target="_blank">
-                  <svg class="socials__icon">
-                    <use xlink:href="images/sprite.svg#in"></use>
-                  </svg></a></li>
-            </ul>
+            <nav class="greeting-container__nav">
+              <!--infoNav принимает массив 0-путь ссылки 1-текст ссылки-->
+              <!--className принимает названия можификатора у li-->
+              <ul class="nav-list">
+                <li class="nav-list__item nav-list__item_welcome"><a class="nav-list__link" href="./works.html">Мои работы</a></li>
+                <li class="nav-list__item nav-list__item_welcome"><a class="nav-list__link" href="./about.html">Обо мне</a></li>
+                <li class="nav-list__item nav-list__item_welcome"><a class="nav-list__link" href="./blog.html">Блог</a></li>
+              </ul>
+            </nav>
           </div>
-          <nav class="greeting-container__nav">
-            <!--infoNav принимает массив 0-путь ссылки 1-текст ссылки-->
-            <!--className принимает названия можификатора у li-->
-            <ul class="nav-list">
-              <li class="nav-list__item nav-list__item_welcome"><a class="nav-list__link" href="./works.html">Мои работы</a></li>
-              <li class="nav-list__item nav-list__item_welcome"><a class="nav-list__link" href="./about.html">Обо мне</a></li>
-              <li class="nav-list__item nav-list__item_welcome"><a class="nav-list__link" href="./blog.html">Блог</a></li>
-            </ul>
-          </nav>
-        </div>
-        <div class="greeting-container__back">
-          <h2 class="greeting-container__autorization-title">АТОРИЗУЙТЕСЬ</h2>
-          <div class="form">
-            <form class="form__elem" method="post" id="form-auth">
-              <div class="form__wrapper">
-                <div class="form__row-text">
-                  <label class="form__label-text" for="login"><i class="fa fa-user" aria-hidden="true"></i></label>
-                  <input class="form__input-text" type="text" id="login" name="login" placeholder="Логин">
-                </div>
-                <div class="form__row-text">
-                  <label class="form__label-text" for="password"><i class="fa fa-key" aria-hidden="true"></i></label>
-                  <input class="form__input-text" type="password" id="password" name="password" placeholder="Пароль">
-                </div>
-                <div class="form__row-checkbox">
-                  <input class="form__input-checkbox" type="checkbox" value="1" id="human" name="human" checked>
-                  <label class="form__label-checkbox" for="human">Я человек</label>
-                </div>
-                <div class="form__row-question"><span class="form__question">Вы точно не робот?</span></div>
-                <div class="form__row-radio">
-                  <div class="form__block-radio">
-                    <input class="form__input-radio" id="testyes" type="radio" name="test" value="человек" checked>
-                    <label class="form__label-radio" for="testyes">Да</label>
+          <div class="greeting-container__back">
+            <h2 class="greeting-container__autorization-title">АВТОРИЗУЙТЕСЬ</h2>
+            <div class="form">
+              <form class="form__elem" method="post" id="form-auth">
+                <div class="form__wrapper">
+                  <div class="form__row-text">
+                    <label class="form__label-text" for="login"><i class="fa fa-user" aria-hidden="true"></i></label>
+                    <input class="form__input-text" type="text" id="login" name="login" placeholder="Логин">
                   </div>
-                  <div class="form__block-radio">
-                    <input class="form__input-radio" id="testno" type="radio" name="test" value="робот">
-                    <label class="form__label-radio" for="testno">Не уверен</label>
+                  <div class="form__row-text">
+                    <label class="form__label-text" for="password"><i class="fa fa-key" aria-hidden="true"></i></label>
+                    <input class="form__input-text" type="password" id="password" name="password" placeholder="Пароль">
+                  </div>
+                  <div class="form__row-checkbox">
+                    <input class="form__input-checkbox" type="checkbox" value="1" id="human" name="human">
+                    <label class="form__label-checkbox" for="human">Я человек</label>
+                  </div>
+                  <div class="form__row-question"><span class="form__question">Вы точно не робот?</span></div>
+                  <div class="form__row-radio">
+                    <div class="form__block-radio">
+                      <input class="form__input-radio" id="testyes" type="radio" name="test" value="человек">
+                      <label class="form__label-radio" for="testyes">Да</label>
+                    </div>
+                    <div class="form__block-radio">
+                      <input class="form__input-radio" id="testno" type="radio" name="test" value="робот" checked>
+                      <label class="form__label-radio" for="testno">Не уверен</label>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="form__nav">
-                <button class="form__nav-btn" type="button">На главную</button>
-                <button class="form__nav-btn" type="submit">Авторизоваться</button>
-              </div>
-            </form>
+                <div class="form__nav">
+                  <button class="form__nav-btn" type="button">На главную</button>
+                  <button class="form__nav-btn" type="submit">Авторизоваться</button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
       <footer class="wrapper-welcome__footer">
-        <p class="copyright undefined">&copy;	Владимир Астахов | Создано с любовью в Loftschool | 2017</p>
-        <!--ToDo: Сделать flip в greeting-container.scss-->
+        <p class="copyright undefined">&copy;	Олег Муллакаев | Создано с любовью в Loftschool | 2017</p>
       </footer>
     </div>
   <script type="text/javascript" src="./js/common.js"></script><script type="text/javascript" src="./js/index.js"></script></body>

@@ -1,9 +1,16 @@
 .greeting-container {
-  width: rem(380px);
   background-color: $transp-bg;
   color: #ffffff;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  transition: .3s linear;
+  position: relative;
   &__face {
-
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: rotateY(0);
+    -moz-transform: rotateY(0);
+    transform: rotateY(0);
   }
   &__main {
     padding: rem(40px) rem(20px) 0;
@@ -16,16 +23,39 @@
   }
   &__info {
     margin-bottom: rem(30px);
+    @include phones {
+      margin-bottom: rem(20px);
+    }
   }
   &__socials {
     margin-bottom: rem(30px);
+    @include phones {
+      margin-bottom: rem(20px);
+    }
   }
   &__back {
-    display: none;
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
   }
   &__autorization-title {
     padding: rem(40px) rem(20px) 0;
     text-align: center;
-    @include subtitle()
+    @include subtitle();
+    @include tablets {
+      font-size: rem(30px);
+    }
+  }
+  &_flip {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    transform: rotateY(180deg);
   }
 }

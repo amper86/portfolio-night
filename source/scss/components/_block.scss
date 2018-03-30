@@ -17,4 +17,11 @@
     transform: translateX(-50%);
     background-color: #98999c;
   }
+  &_slider {
+
+    @include phones {
+      padding-bottom: rem(10px);
+      font-size: rem(21px);
+    }
+  }
 }

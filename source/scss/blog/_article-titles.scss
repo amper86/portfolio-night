@@ -6,11 +6,36 @@
   &__item {
     text-align: right;
     max-width: rem(280px);
+    transition: .3s ease;
+    border-right: 3px solid transparent;
+    @include tablets {
+      border-right: none;
+      color: #ffffff;
+    }
     &_active {
       border-right: 3px solid $light;
+      @include tablets {
+        border-right: none;
+      }
       & .article-titles__link {
         color: $light;
         @include roboto(bold, regular);
+        @include tablets {
+          color: #ffffff;
+        }
+      }
+    }
+    &:hover {
+      border-right: 3px solid $light;
+      @include tablets {
+        border-right: none;
+      }
+      & .article-titles__link {
+        color: $light;
+        @include roboto(bold, regular);
+        @include tablets {
+          color: #ffffff;
+        }
       }
     }
   }
@@ -20,5 +45,8 @@
     text-decoration: none;
     color: $color-text;
     line-height: rem(26px);
+    @include tablets {
+      color: #ffffff;
+    }
   }
 }

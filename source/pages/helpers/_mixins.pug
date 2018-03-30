@@ -39,18 +39,18 @@ mixin test
                         - for (var i=1; i<item.length; i++)
                             li.skills-row__item
                                 .skills-row__container
-                                    svg.skills-row__circle
-                                        circle.skills-row__image-bg(r="60" cx="50" cy="60" fill="none")
-                                        circle.skills-row__image-level(r="60" cx="50" cy="60" transform="rotate(-90 55 55)")
+                                    svg.skills-row__circle(viewBox='0 0 110 110' data-skill='73')
+                                        circle.skills-row__icon-bg(r="45" cx="50%" cy="50%")
+                                        circle.skills-row__icon-level(r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)")
                                     .skills-row__title-skill #{item[i]}
 
 mixin info
     -
         var contacts = [
-        ['skype_kdn', 'skype_n_test', 'skype:'],
-        ['astahov@gmail.com', 'envelope_n', 'mailto:'],
-        ['+7 931 200 93 24', 'phone_n', 'tel:'],
-        ['Новосибирск', 'map_n', '#']
+        ['amper1131', 'skype_n_test', 'skype:'],
+        ['o.mullakaev@gmail.com', 'envelope_n', 'mailto:'],
+        ['+7 926 273 52 92', 'phone_n', 'tel:'],
+        ['Москва', 'map_n', '#']
         ]
     ul.contacts__list
         each contact in contacts
@@ -64,10 +64,10 @@ mixin info
 mixin info-footer
     -
         var info = [
-            ['skype:', 'skype_kdn'],
-            ['mailto:', 'astahov@gmail.com'],
-            ['tel:', '+79312009324'],
-            ['#', 'Новосибирск']
+            ['skype:', 'amper1131'],
+            ['mailto:', 'o.mullakaev@gmail.com'],
+            ['tel:', '+7 9262735292'],
+            ['#', 'Москва']
         ]
     ul.footer__contact-list
         each item in info
@@ -75,10 +75,12 @@ mixin info-footer
                 a.footer__link(href=`${item[0]}` + `${item[1]}`) #{item[1]}
 
 mixin copyright(className)
-    p(class='copyright ' + `${className}`) &copy;	Владимир Астахов | Создано с любовью в Loftschool | 2017
+    p(class='copyright ' + `${className}`) &copy;	Олег Муллакаев | Создано с любовью в Loftschool | 2017
 
 mixin header(titleClass, titleText, descriptionText, ifHide)
     header.header
+        .header__bg
+            img.header__bg-img(src=require('../../images/bg/mount1-min.png'))
         +socials('header', 'header')
         a.burger.header__burger(href='#')
             span.burger__line

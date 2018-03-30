@@ -1,7 +1,9 @@
 .text-content {
   @include roboto(regular, regular);
-  font-size: rem(16px);
   color: $gray;
+  @include phones {
+    padding: 0 rem(10px);
+  }
   p {
     margin-bottom: rem(25px);
     line-height: rem(24px);

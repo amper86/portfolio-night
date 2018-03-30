@@ -2,9 +2,12 @@
   width: 100%;
   padding: rem(70px) 0 rem(300px) 0;
   background-color: #faf8f0;
-  margin-top: -5%;
   position: relative;
   display: flex;
+  justify-content: flex-end;
+  @include phones {
+    padding-bottom: rem(430px);
+  }
   &__triangle-blog {
     position: absolute;
     font-size: 0;
@@ -17,10 +20,57 @@
     width: 100%;
   }
   &__aside {
+    position: absolute;
+    top: 70px;
+    left: 0;
     width: 28%;
-    margin-right: rem(80px);
+    padding-right: rem(80px);
+    transition: left .5s ease;
+    @include small-monitor {
+      padding-right: 0;
+    }
+    @include tablets {
+      position: fixed;
+      left: -90%;
+      top: 0;
+      bottom: 0;
+      width: 90%;
+      background-color: #253468;
+    }
+    &_fixed {
+      position: fixed;
+      top: 70px;
+      left: 0;
+      @include tablets {
+        top: 0;
+        left: -90%;
+        bottom: 0;
+      }
+    }
+    &_mobile {
+      left: 0;
+    }
+    &:after {
+      @include tablets {
+        content: '';
+        display: inline-block;
+        width: rem(80px);
+        height: rem(80px);
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        right: -20px;
+        transform: translateY(-50%);
+        background-color: #253468;
+      }
+    }
   }
   &__content {
     width: 72%;
+    padding-right: rem(25px);
+    @include tablets {
+      width: 100%;
+      padding: 0 rem(25px);
+    }
   }
 }
